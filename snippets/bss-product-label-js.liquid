@@ -1,9 +1,0 @@
-
-                            {{ 'bss-product-label-js.js' | asset_url | script_tag }} 
-                            {{ 'bss-product-label-banner.js' | asset_url | script_tag }} 
-                            {{ 'bss-product-label-popup.js' | asset_url | script_tag }}
-                            {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
-                            {%- if contentForQuerystring contains "bss-pl-custom-selector" -%}
-                              {{'bss-product-label-custom-position.js' | asset_url | script_tag}}
-                            {%- endif -%}
-                        
