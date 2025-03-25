@@ -1,0 +1,137 @@
+<!-- cart-accordion.liquid -->
+<div class="accordion-section">
+  {% for block in section.blocks %}
+    <div class="accordion">
+      <div class="accordion-header">
+        <h3>{{ block.settings.title }}</h3>
+        <button class="accordion-toggle">+</button>
+      </div>
+      <div class="accordion-content">
+        <p>{{ block.settings.content }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<!-- Inline CSS -->
+<style>
+  .accordion-section{
+    width:80%;
+    margin:auto;
+  }
+  @media only screen and (max-width: 768px){
+    .accordion-section{
+    width:96%;
+  }
+  }
+.accordion-section .accordion {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.accordion-section .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #f1f1f1;
+    font-weight: bold; /* Bold header */
+}
+
+.accordion-section .accordion-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold; /* Bold header text */
+}
+
+.accordion-section .accordion-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold; /* Bold toggle button */
+}
+
+.accordion-section .accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.accordion-section .accordion.active .accordion-content {
+    display: block;
+}
+
+.accordion-section .accordion.active .accordion-toggle {
+    content: '-';
+}
+</style>
+
+<!-- Inline JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var headers = document.querySelectorAll('.accordion-header');
+  
+  headers.forEach(function(header) {
+    header.addEventListener('click', function() {
+      var content = this.nextElementSibling;
+      var accordion = this.parentElement;
+      var toggleButton = this.querySelector('.accordion-toggle');
+
+      // Toggle active class and content display
+      accordion.classList.toggle('active');
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        toggleButton.textContent = "+";
+      } else {
+        content.style.display = "block";
+        toggleButton.textContent = "−";
+      }
+
+      // Optionally close other accordions
+      var allAccordions = document.querySelectorAll('.accordion');
+      allAccordions.forEach(function(otherAccordion) {
+        if (otherAccordion !== accordion) {
+          otherAccordion.classList.remove('active');
+          otherAccordion.querySelector('.accordion-content').style.display = "none";
+          otherAccordion.querySelector('.accordion-toggle').textContent = "+";
+        }
+      });
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Cart Accordion",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "accordion_block",
+      "name": "Accordion Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Accordion Title",
+          "default": "Accordion Title"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Accordion Content",
+          "default": "Accordion content goes here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cart Accordion",
+      "category": "Cart"
+    }
+  ]
+}
+{% endschema %}

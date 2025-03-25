@@ -1,0 +1,84 @@
+{% comment %}
+To edit the contents of this file, look inside the `sections` folder for the file name that comes directly after
+`section`. Eg. {% section 'product__main' %} or {% section 'page__banner' %}
+{% endcomment %}
+
+<style>
+  .tab-customize {
+    overflow: hidden;
+    margin: 30px 0;
+  }
+
+  .tab-customize button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 40px;
+    transition: 0.3s;
+    font-size: 18px;
+    text-transform: capitalize;
+    border-radius: 8px;
+    color: #B3B3B3;
+     font-family: Work Sans,sans-serif;
+    font-weight: 500;
+  }
+
+  .tab-customize button:hover, .tab-customize button.active {
+    background-color: #EBEBEB;
+        color: #333;
+  }
+
+  .tabcontent-cus {
+    display: none;
+  }
+
+  .input-group__field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #5656561a, 0 0 0 1px #5656561a;
+    border-radius: 8px;
+    min-height: 44px;
+  }
+
+  .input-group__field:focus-visible, .input-group__field:focus {
+    outline: none;
+  }
+
+</style>
+
+<main id="template-{{ template | replace: '.', '-' | handle }}" class="shopify-section cushions-portfolio-template"
+  data-check-for-order="true">
+  {% section 'custom-portfolio-banner' %}
+  <section class="section__wrapper
+                  section
+                  ">
+
+
+    <div class="fab-p myblogtitle">
+
+      <h3>Custom cushions portfolio</h3>
+      <p class="icon-after"></p>
+    </div>
+    <br>
+
+    <div class="">
+      {% section 'blog__sidebar' %}
+
+<!--        <form action="/search" method="get" role="search">
+        <input type="hidden" name="type" value="article" />
+        <div class="input-group--underline">
+          <input class="input-group__field" type="search" name="q" value="{{ search.terms | escape }}"
+            placeholder="{{ 'general.search.placeholder' | t }}" aria-label="{{ 'general.search.placeholder' | t }}">
+          <div class="input-group__btn">
+        
+          </div>
+        </div>
+      </form>  -->
+       
+            {% section 'custom-cushions-portfolio' %}
+         
+    </div>
+  </section>
+</main>

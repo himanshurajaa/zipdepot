@@ -1,0 +1,188 @@
+<style>
+body:has(.home_banner) {
+    gap: 0
+}
+#shopify-section-{{ section.id }} .container {
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);
+    margin-inline-start: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    margin-inline-end: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    display: block;
+}
+#shopify-section-{{ section.id }} .btn_wrap a {
+    color: var(--var-ffffff);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 4px;
+    background: var(--var-de5956);
+    padding: 15px 30px;
+    display: inline-block;
+    vertical-align: top;
+    transition: all .3s ease-in-out;
+}
+#shopify-section-{{ section.id }} .btn_wrap a:hover {
+    background: #b02a26 !important;
+}
+#shopify-section-{{ section.id }} .home_banner .main_wrapper {
+    border-radius: 20px;
+    padding: 100px 20px;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .home_banner .main_wrapper::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .6) 0, rgba(0, 0, 0, 0) 100%)
+}
+
+#shopify-section-{{ section.id }} .home_banner .main_wrapper .inner_wrap {
+    max-width: 1330px;
+    margin: auto;
+    width: 100%;
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .home_banner .inner_wrap h1 {
+    color: var(--var-ffffff);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+    max-width: 800px
+}
+
+#shopify-section-{{ section.id }} .home_banner .inner_wrap p {
+    color: var(--var-ffffff);
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 550px
+}
+
+#shopify-section-{{ section.id }} .home_banner .inner_wrap .btn_wrap {
+    margin-top: 40px
+}
+
+@media(max-width:1200px) {
+    .home_banner .main_wrapper {
+        min-height: 550px
+    }
+}
+
+@media(max-width:1024px) {
+
+    #shopify-section-{{ section.id }} .home_banner .inner_wrap h1 {
+        font-size: 50px;
+        line-height: 60px;
+        letter-spacing: 0
+    }
+
+    #shopify-section-{{ section.id }} .home_banner .main_wrapper {
+        min-height: 520px
+    }
+}
+
+@media(max-width:767px) {
+    #shopify-section-{{ section.id }} .home_banner .inner_wrap h1 {
+        font-size: 42px;
+        line-height: 50px;
+        margin-bottom: 15px
+    }
+
+    #shopify-section-{{ section.id }} .home_banner .main_wrapper {
+        min-height: auto;
+        padding: 80px 20px 90px
+    }
+
+    #shopify-section-{{ section.id }} .home_banner .inner_wrap p {
+        font-size: 22px;
+        line-height: 28px
+    }
+
+    #shopify-section-{{ section.id }} .home_banner .inner_wrap .btn_wrap {
+        margin-top: 30px
+    }
+}
+
+@media(max-width:575px) {
+    #shopify-section-{{ section.id }} .home_banner {
+        padding-top: 40px
+    }
+
+    #shopify-section-{{ section.id }} .home_banner .main_wrapper {
+        padding: 60px 20px 70px
+    }
+
+    #shopify-section-{{ section.id }} .home_banner .inner_wrap h1 {
+        font-size: 34px;
+        line-height: 42px
+    }
+
+    #shopify-section-{{ section.id }} .home_banner .inner_wrap p {
+        font-size: 20px
+    }
+}  
+</style>
+<div class="home_banner">
+    <div class="container">
+        <div class="main_wrapper" style="background-image: url({{ section.settings.background_image |  image_url: width: 1024 }});">
+            <div class="inner_wrap">
+                <h1>{{ section.settings.title }}</h1>
+                <p>{{ section.settings.subtitle }}</p>
+                <div class="btn_wrap">
+                    <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom Hero",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Custom Hero"
+      }
+    ]
+  }
+{% endschema %}

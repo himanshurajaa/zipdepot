@@ -1,0 +1,64 @@
+<div class="build-custom-cushions-description">
+  <div class="container">
+        <div class="build-custom-cushions-box">
+          <h2>
+           {{ section.settings.title }}
+          </h2>
+          <p> {{ section.settings.content }} </p> 
+          <a href="{{ section.settings.btn_url }}" class="btn"> {{ section.settings.btn_text }} </a>
+          <div class="build-custom-cushions-col"> 
+            <img src="{{ section.settings.content-img | img_url: '1600x700' }}" />
+          </div>
+          
+        </div>
+  </div>          
+</div>
+
+
+{% schema %}
+  {
+    "name": "Build Custom Cushions",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content Here"
+      },
+      {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button"
+      },
+      {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "content-img",
+        "label": "image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "box-item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "Informations-content-list-box",
+            "label": "Informations content list",
+            "default": "Informations content list"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

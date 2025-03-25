@@ -1,0 +1,89 @@
+<div class="customize-from-section">
+        <div class="container">
+          <div class="customize-from-row">
+              <div class="customize-icon-list">
+               
+                <ul>
+                 {% for block in section.blocks %}
+                  <li {{ block.shopify_attributes }}>
+                   <img src="{{ block.settings.content-img | img_url: '400x400' }}" /> 
+                   <h5> {{ block.settings.customize-icon }} </h5>
+                   </li>
+                 {% endfor %} 
+                </ul>
+                
+              </div>
+
+              <div class="customize-from-list">
+               <h4> {{ section.settings.title | escape }} </h4> 
+               <p> {{ section.settings.content }} </p>
+               <div class="from-customize">
+                 {% form 'contact' %}
+                  {{ form.errors | default_errors }}
+                
+                  <div class="first-name">
+                    <input type="text" name="contact[first_name]" placeholder="First name" id="first-name" />
+                  </div>
+                
+                  <div class="email">
+                    <input type="email" name="contact[email]" placeholder="Email" id="email" />
+                  </div>
+                
+                  <div class="phone">
+                    <input type="tel" name="contact[phone]" placeholder="Phone" id="phone" />
+                  </div>
+
+                  
+                  <div class="message">
+                    <textarea name="contact[body]" placeholder="Message" id="message"></textarea>
+                  </div>
+                
+                  <div class="submit">
+                    <input type="submit" value="BUILD CUSTOM CUSHIONS" />
+                  </div>
+                {% endform %}
+               </div>
+              </div>
+          </div>
+        </div>
+            
+</div>
+
+
+{% schema %}
+  {
+    "name": "Customize Icon From",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "From Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "From Content Here"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "box-item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "content-img",
+            "label": "image"
+          },
+          {
+            "type": "text",
+            "id": "customize-icon",
+            "label": "Customize Icon",
+            "default": "Customize Icon"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

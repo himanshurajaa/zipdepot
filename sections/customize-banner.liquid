@@ -1,0 +1,45 @@
+<div class="customize-description" style="background-image: url({{ section.settings.content-img | image_url }})">
+        <div class="container">
+          <div class="customize-description-box">
+            <span class="customize-banner-icon">
+              <img src="{{ section.settings.customize-banner-logo | img_url: '400x400' }}" />
+            </span>
+            <h2>
+             {{ section.settings.title | escape }}
+            </h2>
+            <p> {{ section.settings.content | escape }} </p>
+          </div>
+           
+        </div>
+            
+</div>
+
+
+{% schema %}
+  {
+    "name": "Customize Banner",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "customize-banner-logo",
+        "label": "Customize Banner Logo"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content Here"
+      },
+      {
+        "type": "image_picker",
+        "id": "content-img",
+        "label": "Banner image"
+      }
+    ]
+  }
+{% endschema %}

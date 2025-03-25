@@ -1,0 +1,221 @@
+<style>
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap {
+    padding: 70px 0
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_carousel .owl-stage {
+    display: flex
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .owl-carousel .owl-item {
+    display: flex;
+    flex: 1 0 auto
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_carousel .item {
+    border-radius: 20px;
+    border: 1px solid var(--var-D5D5D5);
+    background-color: var(--var-ffffff);
+    overflow: hidden;
+    padding: 45px;
+    position: relative;
+    height: 100%;
+    font-family: var(--body-font-family);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_carousel .item .rev_message {
+    color: #1a191e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin: 8px 0 20px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_carousel .item .customer_name {
+    color: #1a191e;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: -.42px;
+    background-image: none
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_inner {
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);
+    margin-inline-start: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
+    margin-inline-end: max(var(--container-gutter), 50% - var(--container-max-width) / 2)
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_inner .rev_stars svg {
+    color: #de5956
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_carousel {
+    padding: 0 60px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    height: 0
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_main_wrap .owl-nav button svg {
+    background-color: #d9d9d9;
+    border-radius: 100%;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    display: block;
+    padding: 9px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item:has(.rev_right_content) .rev_left_content {
+    width: 60%
+}
+
+@media(max-width:767px) {
+    #shopify-section-{{ section.id }} .cstm_reviews_main_wrap .owl-nav button svg {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        padding: 7px
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_carousel .item {
+        padding: 25px
+    }
+}
+
+@media(max-width:575px) {
+    #shopify-section-{{ section.id }} .cstm_reviews_main_wrap {
+        padding: 50px 0
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_carousel .item {
+        padding: 15px
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_main_wrap .cstm_reviews_carousel {
+        padding: 0 38px
+    }
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item:has(.rev_right_content) .rev_left_content {
+        width: 100%
+    }
+}  
+</style>
+<div class="cstm_reviews_main_wrap">
+    <div class="cstm_reviews_inner">
+        <div class="cstm_reviews_carousel owl-carousel">
+            {% for review in section.blocks %}
+                <div class="item">
+                  <div class="item_wrap">
+                      <div class="rev_stars">
+                          {% assign rating = review.settings.rating_count %}
+                          {% for i in (1..rating) %}
+                              <svg viewBox="0 0 1792 1792" width="17" height="17" fill="currentColor"><g style="fill: inherit;" width="17" height="17"><path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path></g></svg>
+                          {% endfor %}
+                      </div>
+                      <div class="rev_message">
+                          {{ review.settings.review_text }}
+                      </div>
+                    </div>
+                    <div class="customer_name">{{ review.settings.review_auth }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    jQuery('.cstm_reviews_carousel.owl-carousel').owlCarousel({
+        loop:true,
+        margin:25,
+        nav:true,
+        dots:false,
+        autoplay: true,
+        // slideTransition: 'linear',
+        autoplayTimeout: 6000,
+        autoplaySpeed: 2000,
+        navText: ['<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="sc-68d4lv-5 cYkLBc reputon-swiper-button-prev"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="currentColor"></path></g></svg>','<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="sc-68d4lv-6 htummD reputon-swiper-button-next"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" fill="currentColor"></path></g></svg>'],
+        responsive:{
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            852:{
+                items:3
+            },
+            1182:{
+                items:4
+            },
+            1482:{
+                items:5
+            }
+        }
+    });  
+</script>
+{% schema %}
+  {
+    "name": "New Review Carousel",
+    "settings": [
+        {
+            "type": "text",
+            "id" : "main_title",
+            "label": "Title"
+        },
+        {
+            "type" : "number",
+            "id": "overall_rating",
+            "label": "Overall Rating"
+        },
+        {
+            "type" : "number",
+            "id": "total_reviews",
+            "label": "Total Reviews"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Review",
+            "type": "review_text",
+            "settings": [
+                {
+                    "type": "number",
+                    "id" : "rating_count",
+                    "label": "Rating"
+                },
+                {
+                    "type": "richtext",
+                    "id" : "review_text",
+                    "label": "Review"
+                },
+                {
+                    "type": "text",
+                    "id" : "review_auth",
+                    "label": "Customer Name"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "New Review Carousel"
+      }
+    ]
+  }
+{% endschema %}

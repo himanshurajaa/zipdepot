@@ -1,0 +1,664 @@
+<style>
+#shopify-section-{{ section.id }} .cstm_reviews_container {
+    margin-top: 130px;
+    padding: 0 32px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner {
+    max-width: 740px;
+    margin: auto
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner>h2 {
+    font-size: 28px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head {
+    padding: 20px 0 25px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_field {
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_field input {
+    border: 1px solid #ddd;
+    padding: 12px 45px 12px 18px;
+    border-radius: 4px;
+    outline: 0;
+    width: 100%
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_field .search_icon {
+    background-image: url(/cdn/shop/files/magnifying-glass-bold.svg?v=1732080240);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head select {
+    padding: 12px 46px 12px 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: var(--var-ffffff);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url(https://cdn.shopify.com/s/files/1/0614/7453/7714/files/keyboard_arrow.svg?v=1731409784);
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    min-width: 150px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_sorting_wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item {
+    background: var(--var-ffffff);
+    padding: 45px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid var(--var-D5D5D5);
+    display: flex;
+    gap: 60px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item:has(.rev_right_content) .rev_left_content {
+    width: 60%
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item .rev_right_content {
+    width: 40%
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item .star_rating {
+    display: flex;
+    gap: 4px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--var-de5956);
+    line-height: .9
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item span.author {
+    font-size: 14px;
+    display: block;
+    margin: 10px 0 0
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item span.time {
+    font-size: 12px;
+    color: #888;
+    display: block
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item .review_images {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .review_content {
+    font-size: 15px;
+    line-height: 25px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item .review_images img {
+    width: 100px;
+    border-radius: 6px;
+    aspect-ratio: 1;
+    object-fit: cover
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight h3 {
+    margin: 10px 0;
+    font-family: var(--body-font-family)
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    margin-top: 20px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .cstm_reviews_right .overall_rating h2 {
+    font-size: 40px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .cstm_reviews_right .overall_rating {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .rating_progress_wrap .rating_progress {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 2px;
+    font-size: 14px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .rating_progress_wrap .progress_wrap {
+    width: 240px;
+    height: 16px;
+    background: #f9f9f9;
+    border-radius: 100px;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .rating_progress_wrap .progress_wrap span {
+    position: absolute;
+    width: 0%;
+    background: var(--var-de5956);
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .cstm_reviews_right .overall_rating .overall_more .overall_icons {
+    color: var(--var-de5956);
+    font-size: 20px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .no_reviews_found {
+    text-align: center;
+    color: #a43432;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 10px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstom_bottom_actions.btn_wrap {
+    text-align: center;
+    margin-top: 20px
+}
+
+#shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstom_bottom_actions.btn_wrap button {
+    text-transform: uppercase
+}
+
+@media(max-width:767px) {
+    #shopify-section-{{ section.id }} .cstm_reviews_container {
+        margin-top: 80px
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item {
+        padding: 25px;
+        gap: 20px
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item .review_images img {
+        width: calc(50% - 6px)
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container{
+        padding-left: 20px;
+        padding-right: 20px
+    }
+}
+
+@media(max-width:699px) {
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_field input {
+        padding: 12px 45px 12px 12px
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head select {
+        padding: 12px 46px 12px 12px
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_wrap {
+        width: 45%
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_field .search_icon {
+        background-size: 18px
+    }
+}
+
+@media(max-width:575px) {
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item .rev_right_content,
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_field input,
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_search_wrap,
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_sorting_wrap,
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head select {
+        width: 100%
+    }
+    
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head {
+        flex-wrap: wrap;
+        gap: 15px
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight {
+        flex-wrap: wrap;
+        margin-top: 10px
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container {
+        margin-top: 60px
+    }
+    
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .cstm_reviews_right h3 {
+        margin: 0
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_reviews_head .rev_sorting_wrap {
+        align-items: flex-start;
+        gap: 5px;
+        flex-direction: column
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item:has(.rev_right_content) .rev_left_content {
+        width: 100%
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item {
+        padding: 20px;
+        flex-direction: column
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item .review_images {
+        margin-top: 0
+    }
+
+    #shopify-section-{{ section.id }} .cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item .review_images img {
+        width: calc(33.333% - 6px)
+    }
+}  
+#shopify-section-{{ section.id }} .button {
+    color: var(--var-ffffff);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 4px;
+    background: var(--var-de5956);
+    padding: 15px 30px;
+    display: inline-block;
+    vertical-align: top;
+    transition: all .3s ease-in-out;
+    height: unset !important;
+    padding-block-start: var(--spacing-3);
+    padding-block-end: var(--spacing-3);
+    padding-inline-start: var(--spacing-6);
+    padding-inline-end: var(--spacing-6);  
+}  
+#shopify-section-{{ section.id }} .button:hover {
+    background-color: #b02a26;
+    color: #fff !important;
+}   
+</style>
+<div class="cstm_reviews_container">
+    <div class="cstm_reviews_inner">
+        <h2>Rating & Reviews</h2>
+        <div class="cstm_reviews_hightlight">
+            <div class="cstm_reviews_left">
+                <h3>Rating Snapshot</h3>
+                <div class="rating_progress_wrap">
+                    <div class="rating_progress five_stars">5 stars <div class="progress_wrap"><span style="width:0%;"></span></div></div>
+                    <div class="rating_progress four_stars">4 stars <div class="progress_wrap"><span style="width:0%;"></span></div></div>
+                    <div class="rating_progress three_stars">3 stars <div class="progress_wrap"><span style="width:0%;"></span></div></div>
+                    <div class="rating_progress two_stars">2 stars <div class="progress_wrap"><span style="width:0%;"></span></div></div>
+                    <div class="rating_progress one_stars">1 stars <div class="progress_wrap"><span style="width:0%;"></span></div></div>
+                </div>
+            </div>
+            <div class="cstm_reviews_right">
+                <h3>Overall Rating</h3>
+                <div class="overall_rating">
+                    <h2>0.00</h2>
+                    <div class="overall_more">
+                        <div class="overall_icons">
+                            <span class="star_icon">&#9733;</span>
+                            <span class="star_icon">&#9733;</span>
+                            <span class="star_icon">&#9733;</span>
+                            <span class="star_icon">&#9733;</span>
+                            <span class="star_icon">&#9733;</span>
+                        </div>
+                        <p>0 Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cstm_reviews_head">
+            <div class="rev_search_wrap">
+                <div class="rev_search_field">
+                    <input type="search" name="custom_search_reviews_inp" id="custom_search_reviews_inp" placeholder="Search topics and reviews">
+                    <span class="search_icon"></span>
+                </div>
+                <div class="rev_filter_wrap">
+                    <select name="rev_sort_by_rating" id="rev_sort_by_rating">
+                        <option value="">Rating</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Star</option>
+                        <option value="3">3 Star</option>
+                        <option value="4">4 Star</option>
+                        <option value="5">5 Star</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rev_sorting_wrap">
+                <span>Sort By </span>
+                <select name="rev_sort_by" id="rev_sort_by">
+                    <option value="">Most Relevant</option>
+                    <option value="most_helpful">Most helpful</option>
+                    <option value="h_to_l">Highest to lowest rating</option>
+                    <option value="l_to_h">Lowest to highest rating</option>
+                    <option value="most_recent">Most Recent</option>
+                </select>
+            </div>
+        </div>
+        <div class="cstm_review_body"></div>
+        <div class="no_reviews_found" style="display: none;">
+            <h2>No reviews found</h2>
+        </div>
+        <div class="cstom_bottom_actions btn_wrap">
+            <button class="button cstm_loadmore_revs" >Load more</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // &#9733; // Filled
+    // &#9734; // Outlined
+
+    jQuery(document).on('click', '.cstom_bottom_actions .cstm_loadmore_revs', function(){
+        let all_reviews = jQuery('.cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item.visible_to_filter');
+        let hidden_reviews = all_reviews.filter(':hidden');
+        hidden_reviews.slice(0, 6).show();
+
+        if (hidden_reviews.length <= 6) {
+            jQuery(this).hide();
+        }
+    });
+
+    jQuery(document).on('change', '#rev_sort_by', function(){
+        jQuery('#rev_sort_by_rating').val('');
+        let this_val = jQuery(this).val();
+        let all_reviews = jQuery('.cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item');
+
+        let rev_order_arr = [];
+        all_reviews.each(function(index, elm){
+            rev_order_arr.push({
+                rating:Number(jQuery(elm).attr('data_rating')),
+                item:jQuery(elm)
+            });
+        });
+
+        if(this_val == "most_helpful"){
+        } else if(this_val == "l_to_h"){
+            rev_order_arr.sort((a, b) => a.rating - b.rating);
+        } else if(this_val == "h_to_l"){
+            rev_order_arr.sort((a, b) => b.rating - a.rating);
+        } else if(this_val == "most_recent"){
+        } else {
+        }
+        
+        let visible_order_items = 0;
+        rev_order_arr.forEach(function(item, indx){
+            if(visible_order_items < 6){
+                item.item.show();
+            } else {
+                item.item.hide();
+            }
+            item.item.addClass('visible_to_filter').css({order:(indx+1)});
+            visible_order_items++;
+        });
+
+        if(visible_order_items > 6){
+            jQuery('.cstom_bottom_actions .cstm_loadmore_revs').show();
+        } else {
+            jQuery('.cstom_bottom_actions .cstm_loadmore_revs').hide();
+        }
+    });
+
+    jQuery(document).on('change', '#rev_sort_by_rating', function(){
+        jQuery('#rev_sort_by').val('');
+        let this_val = jQuery(this).val();
+        let all_reviews = jQuery('.cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item');
+        let visible_revs = 0;
+        all_reviews.each(function(index, elm){
+            let this_review = jQuery(this);
+            let this_rating = Number(this_review.attr('data_rating'));
+            if (this_val == '') {
+                this_review.addClass('visible_to_filter');
+                if(visible_revs < 6){
+                    this_review.show();
+                }else{
+                    this_review.hide();
+                }
+                visible_revs++
+            } else {
+                if (this_rating == this_val) {
+                    this_review.addClass('visible_to_filter');
+                    if(visible_revs < 6){
+                        this_review.show();
+                    }else{
+                        this_review.hide();
+                    }
+                    visible_revs++
+                } else {
+                    this_review.removeClass('visible_to_filter').hide();
+                }
+            }
+
+            if(visible_revs > 6){
+                jQuery('.cstom_bottom_actions .cstm_loadmore_revs').show();
+            } else {
+                jQuery('.cstom_bottom_actions .cstm_loadmore_revs').hide();
+            }
+
+            if(index == all_reviews.length-1){
+                if(visible_revs == 0){
+                    jQuery('.cstm_reviews_container .cstm_reviews_inner .no_reviews_found').show();
+                } else {
+                    jQuery('.cstm_reviews_container .cstm_reviews_inner .no_reviews_found').hide();
+                }
+            }
+        });
+    })
+    
+    jQuery(document).on('input', '#custom_search_reviews_inp', function(){
+        let this_inp = jQuery(this);
+        let this_val = this_inp.val();
+        let all_reviews = jQuery('.cstm_reviews_container .cstm_reviews_inner .cstm_review_body .rev_item');
+        let visible_revs = 0;
+        all_reviews.each(function(indx, elm){
+            let this_review = jQuery(this);
+            let this_review_text = this_review.find('.review_content p').text()+' '+ this_review.find('span.author').text();
+            if (this_review_text.toLowerCase().includes(this_val.toLowerCase())) {
+                this_review.addClass('visible_to_filter');
+                if(visible_revs < 6){
+                    this_review.show();
+                }else{
+                    this_review.hide();
+                }
+                visible_revs++;
+            } else {
+                this_review.removeClass('visible_to_filter').hide();
+            }
+
+            if(visible_revs > 6){
+                jQuery('.cstom_bottom_actions .cstm_loadmore_revs').show();
+            } else {
+                jQuery('.cstom_bottom_actions .cstm_loadmore_revs').hide();
+            }
+
+            if(indx == all_reviews.length-1){
+                if(visible_revs == 0){
+                    jQuery('.cstm_reviews_container .cstm_reviews_inner .no_reviews_found').show();
+                } else {
+                    jQuery('.cstm_reviews_container .cstm_reviews_inner .no_reviews_found').hide();
+                }
+            }
+        });
+    });
+
+    function get_percentage(val, total){
+        return (val / total) * 100;
+    }
+
+    function truncate_text(str, n){
+        return (str.length > n) ? str.slice(0, n-1) + '&hellip;' : str;
+    };
+    function draw_reviews_content() {
+        (window.reputon_widget_google_content_response).then(function (n) {
+          
+          if(n != undefined){
+            let all_reviews = n.business[0].reviews;
+
+            let overall_rating = n.business[0].rating;
+            let total_reviews = n.business[0].reviewsNumber;
+            let write_a_review = n.business[0].writeReviewUrl;
+
+            jQuery('.cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .cstm_reviews_right .overall_rating h2').html(overall_rating);
+            jQuery('.cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .cstm_reviews_right .overall_rating .overall_more > p').html(total_reviews+' Reviews');
+
+            let total_reviews_count = all_reviews.length;
+            let five_star_rating = 0;
+            let four_star_rating = 0;
+            let three_star_rating = 0;
+            let two_star_rating = 0;
+            let one_star_rating = 0;
+            
+            all_reviews.forEach(function(review_item, index){
+                let author = review_item.authorName;
+                let auth_url = review_item.authorUrl;
+                let profile = review_item.profilePhotoUrl;
+                let rating = review_item.rating;
+                let time = review_item.relativeTimeDescription;
+                let review = review_item.text;
+                let heading = truncate_text(review, 20);
+
+                switch(Math.round(rating)){
+                    case 5:
+                        five_star_rating++;
+                        break;
+                    case 4:
+                        four_star_rating++;
+                        break;
+                    case 3:
+                        three_star_rating++;
+                        break;
+                    case 2:
+                        two_star_rating++;
+                        break;
+                    case 1:
+                        one_star_rating++;
+                        break;
+                }
+
+
+                let rating_html = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= rating) {
+                        rating_html += '<span class="fill_star">&#9733;</span>';
+                    } else {
+                        rating_html += '<span class="empty_star">&#9734;</span>';
+                    }
+                }
+
+                let review_images_html = '';
+                if(review_item.images){
+                    review_images_html += '<div class="rev_right_content"><div class="review_images">';
+                    review_item.images.forEach(img => {
+                        review_images_html += `<img src="${img.thumbnailUrl}" alt="">`;
+                    });
+                    review_images_html += '</div></div>';
+                }   
+                let visible_rev_style = '';
+                if(index > 5){
+                    visible_rev_style = 'style="display:none;"';
+                }
+                jQuery('.cstm_reviews_container .cstm_reviews_inner .cstm_review_body').append(`
+                    <div class="rev_item visible_to_filter" data_rating="${rating}" ${visible_rev_style}>
+                        <div class="rev_left_content">
+                            <div class="star_rating">${rating_html}</div>
+                            <div class="review_content">
+                                <p>${review}</p>
+                            </div>
+                            <span class="author"><a href="${auth_url}">${author}</a></span>
+                            <span class="time">${time}</span>
+                        </div>
+                        ${review_images_html}
+                    </div>
+                `);
+                // <h2><img src="${profile}" alt="">${heading}</h2>
+                
+                if(total_reviews_count == index+1){
+                    jQuery('.cstm_reviews_container .cstm_reviews_inner .cstm_reviews_hightlight .cstm_reviews_left .rating_progress_wrap .rating_progress').each(function(indx, elm){
+                        let this_rating = jQuery(elm);
+                        if(this_rating.hasClass('five_stars')){
+                            this_rating.find('.progress_wrap span').css('width', get_percentage(five_star_rating, total_reviews_count)+'%');
+                        } else if(this_rating.hasClass('four_stars')){
+                            this_rating.find('.progress_wrap span').css('width', get_percentage(four_star_rating, total_reviews_count)+'%');
+                        } else if(this_rating.hasClass('three_stars')){
+                            this_rating.find('.progress_wrap span').css('width', get_percentage(three_star_rating, total_reviews_count)+'%');
+                        } else if(this_rating.hasClass('two_stars')){
+                            this_rating.find('.progress_wrap span').css('width', get_percentage(two_star_rating, total_reviews_count)+'%');
+                        } else if(this_rating.hasClass('one_stars')){
+                            this_rating.find('.progress_wrap span').css('width', get_percentage(one_star_rating, total_reviews_count)+'%');
+                        }
+                    });
+                }
+            });
+        }
+        });
+    }
+
+    let review_draw_timer = setInterval(() => {
+        if (window.reputon_widget_google_content_response) {
+            draw_reviews_content();
+            clearInterval(review_draw_timer);
+        }
+    }, 1000);
+</script>
+{% schema %}
+    {
+      "name": "Custom Google Reviews",
+      "settings": [],
+      "presets": [
+        {
+          "name": "Custom Google Reviews"
+        }
+      ]
+    }
+  {% endschema %}

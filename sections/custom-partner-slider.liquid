@@ -1,0 +1,149 @@
+<style>
+#shopify-section-{{ section.id }} .our_partners_sec h2 {
+    color: var(--var-000000);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1.08px;
+    margin-bottom: 25px
+}
+
+#shopify-section-{{ section.id }} .our_partners_sec {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    overflow: hidden
+}
+
+#shopify-section-{{ section.id }} .our_partners_sec .owl-carousel .owl-stage-outer {
+    overflow: visible
+}
+
+#shopify-section-{{ section.id }} .our_partners_sec .slider_wrapper {
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .our_partners_sec .slide_item img {
+    filter: grayscale(100%);
+    transition: .2s ease-in-out;
+    max-height: 150px;
+    width: auto !important;
+    margin: auto
+    display: block;
+}
+
+#shopify-section-{{ section.id }} .our_partners_sec .slide_item img:hover {
+    filter: grayscale(0)
+}
+
+@media(max-width:1024px) {
+
+    #shopify-section-{{ section.id }} .our_partners_sec h2{
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0
+    }
+}
+
+
+@media(max-width:575px) {
+    #shopify-section-{{ section.id }} .our_partners_sec {
+        padding-top: 20px;
+        padding-bottom: 80px
+    }
+
+    #shopify-section-{{ section.id }} .our_partners_sec h2{
+        margin-bottom: 20px;
+        font-size: 28px;
+        line-height: 38px
+    }
+}  
+#shopify-section-{{ section.id }} .container {
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);
+    margin-inline-start: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    margin-inline-end: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    display: block;
+}
+</style>
+<div class="our_partners_sec">
+    <div class="container">
+        <div class="main_wrapper">
+            <h2>{{ section.settings.title }}</h2>
+            <div class="slider_wrapper">
+                <div class="owl-carousel owl-theme">
+                    {% for block in section.blocks %}
+                        <div class="item">
+                            <div class="slide_item
+                                {% if block.settings.image == blank %}
+                                    empty
+                                {% endif %}">
+                                <a href="{% if block.settings.link != nil %}{{ block.settings.link }}{% else %}javascript:;{% endif %}">
+                                    <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+jQuery('.our_partners_sec .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: false,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:4
+            },
+            1000:{
+                items:7
+            }
+        }
+    });  
+</script>
+
+
+{% schema %}
+    {
+        "name": "Partner Slider",
+        "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Our Partners and Certifications"
+                }
+        ],
+        "blocks": [
+            {
+                "type": "image_picker",
+                "name": "Image",
+                "settings": [
+                        {
+                            "type": "image_picker",
+                            "id": "image",
+                            "label": "Image"
+                        },
+                        {
+                            "type": "url",
+                            "id": "link",
+                            "label": "Link"
+                        }
+                ]
+            }
+        ],
+        "presets": [
+            {
+            "name": "Partner Slider"
+            }
+        ]
+    }
+{% endschema %}

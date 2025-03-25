@@ -1,0 +1,295 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-content__main",
+      "disabled": true,
+      "settings": {
+        "show_heading": true,
+        "heading_alignment": "center",
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "customize-banner": {
+        "type": "customize-banner",
+        "settings": {
+          "customize-banner-logo": "shopify://shop_images/1k7g1fz-artboard-1_107507403t03301n01y028.png",
+          "title": "Customize Cushions, Customize Comfort",
+          "content": "Grace your furniture with a fresh range of comfort",
+          "content-img": "shopify://shop_images/15pnz2c-shutterstock-1136759030_12i10u000000000000001o.jpg"
+        }
+      },
+    "custom-from": {
+        "type": "custom-from",
+        "blocks": {
+          "e88e94d4-cf72-4864-a9dd-1dcf81e11b3f": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1y8cvch-free-delivery_101y01y000000000000028.png",
+              "customize-icon": "Free Shipping"
+            }
+          },
+          "359bb516-3fc4-46a3-99a7-0c4d113054c9": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/ghqcvw-003-price-tag_101h01f000000000000028.png",
+              "customize-icon": "Pay Over Time"
+            }
+          },
+          "8ab150c5-3457-44e7-927d-ca7f26b1e45c": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/12ey9ax-001-warranty_101x01x01v01v000000028.png",
+              "customize-icon": "Unbeatable Warranty"
+            }
+          },
+          "31cc7530-2baa-486d-812f-4f178e05fcdf": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/wvvdi4-004-wall-clock_101g01g000000000000028.png",
+              "customize-icon": "24x7 Support"
+            }
+          },
+          "e7c45db7-da58-4da4-b9eb-d5b439f0199a": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/cem65w-production_101p01p000000000000028.png",
+              "customize-icon": "Fastest Production Time"
+            }
+          },
+          "e711c038-a6dd-4a58-8524-b3a6685fccd0": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1hqcqv3-002-delivery-truck_101z01z01z01c000009028.png",
+              "customize-icon": "Delivery within 3 weeks"
+            }
+          }
+        },
+        "block_order": [
+          "e88e94d4-cf72-4864-a9dd-1dcf81e11b3f",
+          "359bb516-3fc4-46a3-99a7-0c4d113054c9",
+          "8ab150c5-3457-44e7-927d-ca7f26b1e45c",
+          "31cc7530-2baa-486d-812f-4f178e05fcdf",
+          "e7c45db7-da58-4da4-b9eb-d5b439f0199a",
+          "e711c038-a6dd-4a58-8524-b3a6685fccd0"
+        ],
+        "settings": {
+          "title": "Design your Dream Cushions",
+          "content": "Hey! Fill this form and we'll get back to you earliest!"
+        }
+      },
+    "custom-cushions": {
+        "type": "custom-cushions",
+        "settings": {
+          "title": "Build Your <strong> Custom Cushions </strong>",
+          "content": "Select a STYLE to get started!",
+          "btn_text": "Call us For a Free Consultation",
+          "btn_url": "#",
+          "content-img": "shopify://shop_images/d1bb6d18-shutterstock-1912368844-1_10q40ep000000000000000.jpg"
+        }
+      },
+    "from-quality": {
+        "type": "from-quality",
+        "blocks": {
+          "08c41757-b867-4919-ac78-f5172568d29e": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1i75wb3-sunbrella-logo_1058025000000000000028.png",
+              "box-title": "Sunbrella® and Agora®:",
+              "content-list-box": "- Gold Standard Outdoor Fabric - 5 Years of Warranty Against UV Fading"
+            }
+          },
+          "4c0ad9e5-31e8-42c7-9169-c7faadf2ebcd": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/nvirlo-ykk-group-logo-svg_103c00z000000000000028.png",
+              "box-title": "YKK® Zippers:",
+              "content-list-box": "- For Maximum Zip Life - Durable and Strong"
+            }
+          },
+          "bf83adab-798f-4693-ae2b-f8fe5d658716": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/zcwhau-001-seamstress_102k02k000000000000028.png",
+              "box-title": "Best In Class Seamstress",
+              "content-list-box": "- Years of Experience in Hand Sewing"
+            }
+          },
+          "656b7e32-b92e-4118-b6ca-29d1804959fd": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/xp2q0j-002-uv-protection_102y02y000000000000028.png",
+              "box-title": "UV Treated Fabric:",
+              "content-list-box": "- UV Treated Threads - Better Durability"
+            }
+          }
+        },
+        "block_order": [
+          "08c41757-b867-4919-ac78-f5172568d29e",
+          "4c0ad9e5-31e8-42c7-9169-c7faadf2ebcd",
+          "bf83adab-798f-4693-ae2b-f8fe5d658716",
+          "656b7e32-b92e-4118-b6ca-29d1804959fd"
+        ],
+        "settings": {
+          "title": "OUR <strong> UNMATCHED QUALITY </strong>"
+        }
+      },
+    "from-quality-bottom": {
+        "type": "from-quality-bottom",
+        "blocks": {
+          "fe7e8509-64fd-461e-8ca0-5f37996bf8df": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/12rr50x-7_10am0730am05z00000k01o.jpg",
+              "box-title": "Comfort in Every Shape and Size",
+              "content-list-box": "Custom shapes that fit your needs."
+            }
+          },
+          "4c4c0c33-8e1b-4b27-8725-3683e33a0bf1": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/g604h1-cushions_10am0cq0am05z000024028.png",
+              "box-title": "Uncompromised Customized Replacement",
+              "content-list-box": "100+ fabrics to choose from."
+            }
+          },
+          "d60b3445-447f-4a4e-ac96-e91f4672fa94": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/o29ezf-bench-cushions_10am0cq0am05z00003r028.png",
+              "box-title": "Aesthetically Comfortable Window Nooks",
+              "content-list-box": "A window to sunny times. Bench cushions in custom shapes."
+            }
+          },
+          "5e88e4b1-c752-432d-bee3-95cd5320d368": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/tvg9ll-cambridge-casual-auburn-teak-patio-lounge-chair-with-cushion-2e4e7196-b465-4ba2-9665-d2801f5eea0a-600_10am0am0am05z00001q01o.jpg",
+              "box-title": "Build to Perfection Arm Chair Cushions",
+              "content-list-box": "Beautiful chair cushions in trapezium, square and T shape"
+            }
+          }
+        },
+        "block_order": [
+          "fe7e8509-64fd-461e-8ca0-5f37996bf8df",
+          "4c4c0c33-8e1b-4b27-8725-3683e33a0bf1",
+          "d60b3445-447f-4a4e-ac96-e91f4672fa94",
+          "5e88e4b1-c752-432d-bee3-95cd5320d368"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+    "from-gallery": {
+        "type": "from-gallery",
+        "blocks": {
+          "18c58430-060e-41e0-ba3c-1bf33db43f78": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1gqr8md-0-11-2-2_105n08c05906f00e00001o.jpg"
+            }
+          },
+          "7b32687f-fe13-4956-b842-4cf12bd04f48": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/10pg6sz-1_106w05600000000000001o.jpg"
+            }
+          },
+          "c22f3299-93bb-4b85-8677-5ef17b1fd151": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/18uuejc-3_109p05m00000000000001o.jpg"
+            }
+          },
+          "5ace4909-0719-4c14-a609-ca29cb7d2cbe": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1593jv1-5_106w04j00000000000001o.jpg"
+            }
+          },
+          "e2eacc18-db0f-4bf4-8647-2589f5d433a9": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1sfltwt-6_109p06b09p04w00001001o.jpg"
+            }
+          },
+          "9aeafa13-4999-421f-ab0e-2067b1600e0e": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/12rr50x-7_109m06f05906f01m00001o.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "18c58430-060e-41e0-ba3c-1bf33db43f78",
+          "7b32687f-fe13-4956-b842-4cf12bd04f48",
+          "c22f3299-93bb-4b85-8677-5ef17b1fd151",
+          "5ace4909-0719-4c14-a609-ca29cb7d2cbe",
+          "e2eacc18-db0f-4bf4-8647-2589f5d433a9",
+          "9aeafa13-4999-421f-ab0e-2067b1600e0e"
+        ],
+        "settings": {
+          "title": "GALLERY"
+        }
+      },
+    "from-testimonial": {
+        "type": "from-testimonial",
+        "blocks": {
+          "0575b90c-b87a-455f-836f-445cabab8cf8": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1xigbts-left-quote_1026026026024000000028.png",
+              "box-title": "Mary Williams",
+              "content-list-box": "\"I have often jokingly said to my husband that our kids represent the quality and strength test whenever we review any products. Trust me, their energy is off the charts, and believe me when I tell you that they have put this zip cushion through its paces. There were juice spills, food spills, mud tracking and many other accidents.\""
+            }
+          },
+          "d36f2c3f-d054-4399-add4-077480492e1e": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1xigbts-left-quote_1026026026024000000028.png",
+              "box-title": "Genie Desooza",
+              "content-list-box": "\"What impressed me the most when I bought these sessions was the sturdiness of the build. Bought other cushions in the past, but somehow something always goes wrong. Whether it is the zipper going bad after a short while or the stitching coming apart due to rotting threads, there is always something. That is, until I found ZipCushions.\""
+            }
+          },
+          "06dee470-9702-442b-8a46-365af570fef4": {
+            "type": "logo_image",
+            "settings": {
+              "content-img": "shopify://shop_images/1xigbts-left-quote_1026026026024000000028.png",
+              "box-title": "Shanon Miller",
+              "content-list-box": "\"One thing us homeowners or home decorators normally take for granted is our selection of cushions and throw pillows. Some of us do not realize that in addition to physical appeal, our cushions have to have staying power. I am pleased with the selection offered by ZIPCushions. I bought my last   3 sets of cushions from them and I am most impressed.\""
+            }
+          }
+        },
+        "block_order": [
+          "0575b90c-b87a-455f-836f-445cabab8cf8",
+          "d36f2c3f-d054-4399-add4-077480492e1e",
+          "06dee470-9702-442b-8a46-365af570fef4"
+        ],
+        "settings": {
+          "title": "TESTIMONIALS"
+        }
+      },
+  },
+  "order": [
+    "main",
+    "customize-banner",
+    "custom-from",
+    "custom-cushions",
+    "from-quality",
+    "from-quality-bottom",
+    "from-gallery",
+    "from-testimonial"
+  ]
+}

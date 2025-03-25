@@ -1,0 +1,398 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "new_hero_banner_tQH3DX": {
+      "type": "new-hero-banner",
+      "settings": {
+        "hero_title": "Know Your Fabrics",
+        "hero_cta_text": "",
+        "hero_cta_link": ""
+      }
+    },
+    "all_fabric_new_section_7QP6dR": {
+      "type": "all-fabric-new-section",
+      "blocks": {
+        "fabric_info_YqUPn8": {
+          "type": "fabric_info",
+          "settings": {
+            "out_or_in": "outdoor",
+            "fabric_type": "Machine Washable",
+            "fabric_info_title": "Sunbrella",
+            "fabric_info_subtitle": "100% Solution-Dyed",
+            "fabric_info_about_head": "We offer Sunbrella® fabrics in more than 200 colors and finishes.",
+            "fabric_info_about": "<p>Sunbrella fabrics are 100% solution-dyed acrylic fabrics, which means the fiber is saturated with color and UV-stabilized pigments, making it UV and fade resistant to the core.<br/>These fabrics are also water, stain, mold, and mildew resistant. Sunbrella fabrics are tough enough to withstand outdoor elements but still feel soft and comfortable for indoor use.<br/>They are easy to clean and maintain and are available in a vast collection of colors, patterns, and designs for any kind of furnishing project. All Sunbrella fabrics come with a 5-year manufacturer’s warranty against fading.</p>",
+            "fabric_info_details": "<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>",
+            "fabric_info_care": "<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>",
+            "fabric_gallery_id": "14"
+          }
+        },
+        "fabric_info_698gG8": {
+          "type": "fabric_info",
+          "settings": {
+            "out_or_in": "outdoor",
+            "fabric_type": "",
+            "fabric_info_title": "Agora",
+            "fabric_info_subtitle": "100% Solution-Dyed",
+            "fabric_info_about_head": "Agora® uses 100% solution-dyed fiber for its fabrics.",
+            "fabric_info_about": "<p>Agora® offers a range of high-quality outdoor/indoor fabrics in 90+ vibrant shades and striped patterns. Agora fabrics are UV-safe and fade-resistant, even in harsh conditions. They are also water, stain, mold, and mildew-resistant. The Agora® fabrics offer a 5-year warranty against fading. These fabrics can be washed simply with water in most cases, but remember that the most stubborn dirt can be removed with common household cleaning products, including bleach. Fast-drying and wrinkle-resistant, Agora fabrics will look like new for years.</p>",
+            "fabric_info_details": "",
+            "fabric_info_care": "",
+            "fabric_gallery_id": "13"
+          }
+        },
+        "featured_info_Qm433k": {
+          "type": "featured_info",
+          "settings": {
+            "feat_desc": "<p>Ready for the next step?<br/>Get some swatches ordered here.</p>",
+            "feat_btn_text": "ORDER FABRIC SAMPLES",
+            "feat_btn_link": ""
+          }
+        },
+        "fabric_info_WjXTK4": {
+          "type": "fabric_info",
+          "settings": {
+            "out_or_in": "indoor",
+            "fabric_type": "Pet friendly",
+            "fabric_info_title": "Stamskin",
+            "fabric_info_subtitle": "100% Solution-Dyed",
+            "fabric_info_about_head": "Presenting Stamskin by Serge Ferrari, a highly durable fabric with a mesmerizing leather-like finish.",
+            "fabric_info_about": "",
+            "fabric_info_details": "",
+            "fabric_info_care": "",
+            "fabric_gallery_id": "13"
+          }
+        },
+        "fabric_info_MY8Ue7": {
+          "type": "fabric_info",
+          "settings": {
+            "out_or_in": "indoor",
+            "fabric_type": "",
+            "fabric_info_title": "Blue Sky II",
+            "fabric_info_subtitle": "100% Solution-Dyed",
+            "fabric_info_about_head": "",
+            "fabric_info_about": "<p>Sunbrella fabrics are 100% solution-dyed acrylic fabrics, which means the fiber is saturated with color and UV-stabilized pigments, making it UV and fade resistant to the core.<br/><br/>These fabrics are also water, stain, mold, and mildew resistant. Sunbrella fabrics are tough enough to withstand outdoor elements but still feel soft and comfortable for indoor use.<br/><br/>They are easy to clean and maintain and are available in a vast collection of colors, patterns, and designs for any kind of furnishing project. All Sunbrella fabrics come with a 5-year manufacturer’s warranty against fading.<br/> <br/></p>",
+            "fabric_info_details": "<ul><li>UV safe and fade resistant</li><li>Solution dyed acrylic fabric</li><li>Water and stain resistant</li><li>Mold and mildew resistant</li><li>Indoor and outdoor uses</li><li>5-Year Warranty against fading</li></ul>",
+            "fabric_info_care": "",
+            "fabric_gallery_id": "14"
+          }
+        }
+      },
+      "block_order": [
+        "fabric_info_YqUPn8",
+        "fabric_info_698gG8",
+        "featured_info_Qm433k",
+        "fabric_info_WjXTK4",
+        "fabric_info_MY8Ue7"
+      ],
+      "settings": {
+        "main_title": "We stock fabrics from 27 different suppliers",
+        "main_subtitle": "Ready for the next step?  Get some swatches ordered here",
+        "main_btn_text": "ORDER FABRIC SAMPLES",
+        "main_btn_link": ""
+      }
+    },
+    "0a3efbc1-4cb9-4eb3-ba79-74f9fe3f1f47": {
+      "type": "app-rush-container-grid",
+      "disabled": true,
+      "settings": {
+        "visibility": "all_the_time",
+        "columns_mobile": 1,
+        "columns_tablet": 1,
+        "columns_desktop": 1,
+        "columns_large": 1,
+        "columns_xlarge": 1,
+        "columns_2xlarge": 1,
+        "cssStyle": ""
+      }
+    },
+    "fd53e63e-079f-433a-8906-30981bd6f285": {
+      "type": "app-rush-container-grid",
+      "disabled": true,
+      "settings": {
+        "visibility": "all_the_time",
+        "columns_mobile": 1,
+        "columns_tablet": 2,
+        "columns_desktop": 2,
+        "columns_large": 2,
+        "columns_xlarge": 2,
+        "columns_2xlarge": 2,
+        "cssStyle": ""
+      }
+    },
+    "acc69ba7-c6fc-4b19-b66a-36ebbe298bef": {
+      "type": "index__image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/02-know-your-fabrics-1920x700_0mf7.png",
+        "mobile_image": "shopify://shop_images/about_banner_1800_x_750_px_900_x_1800_px.png",
+        "link": "",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#2e4672",
+        "heading_color": "#2e4672",
+        "subheading_color": "#2e4672",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "398d8028-3013-4769-baff-b23244de06ab": {
+      "type": "index__html",
+      "disabled": true,
+      "settings": {
+        "html_content": "<body>\n\n\n<style>\nbody {\n  font-family: 'Tahoma', sans-serif;\n}\n</style>\n<p><br><br>\n<b> <h3 style=\"color:#00bf0a;\">Who We Are\n</h3></b>\n</p>\n<p style=\"color:#3b3d3b;\">\n\nAt ZIPcushions, we believe in the transformative power of comfort and design. Nestled at the intersection of craftsmanship, customization and innovation, our ethos is rooted in delivering an unmatched blend of quality and service. We go beyond crafting your custom cushion, we sculpt and curate unforgettable moments for you. Our mission? To turn your visions into realities, spaces into experiences, and houses into homes.\n</p>\n<p> <br>\n<b><h3 style=\"color:#00bf0a;\">From Challenge to Change: The Founder's Vision</h3></b>\n</p>\n<p style=\"color:#3b3d3b;\">\n\nBorn out of our founder Maria's quest for quality and affordability, ZIPCushions emerged as a beacon of change in the custom cushion industry. Frustrated by the market's limitations, Maria envisioned a better way. Her passion led her to create a brand dedicated to crafting customizable cushions that met the highest standards of quality and design. Today, ZIPCushions is a testament to Maria's commitment to excellence, elegance, and an unparalleled customer experience, all at a reasonable price.\n</p>\n<p><br>\n<b><h3 style=\"color:#00bf0a;\">What do we do? We craft comfort with precision</h3></b>\n</p>\n<p style=\"color:#3b3d3b;\">\n\nAt ZIPcushions, every cushion is a testament to our commitment to excellence. Whether you're sprucing up an outdoor patio, seeking replacement cushions for furniture, decking out a boat, elevating an RV interior, adding comfort to a cozy window bay and other indoor spaces or elevating the experience of your bustling cafe, our custom-made cushions are designed to enhance every room. We believe in perfection, ensuring that our products offer unparalleled comfort and stand the test of time in various settings and conditions.\n</p>\n<p><br>\n<b><h3 style=\"color:#00bf0a;\">Driven by Values, Not Just Profits</h3></b>\n</p>\n<p style=\"color:#3b3d3b;\">\n\nAt ZIPCushions, we prioritize relationships over transactions. Our approach, rooted in fairness and transparency, is about understanding and catering to your unique needs. With our unwavering commitment to service, we aim to provide a hassle-free shopping experience with personalized assistance at every step. Even after your delivery, our dedication continues, ensuring your complete satisfaction. We're not just in the business of selling cushions; we're in the business of building trust. With ZIPCushions, you're not just a customer but part of our ever-growing family.\n</p>\n<p><br>\n<b><h3 style=\"color:#00bf0a;\">Empowering Communities\n</h3></b></p>\n<p style=\"color:#3b3d3b;\">\nChoosing ZIPCushions is a choice that resonates beyond comfort. It's a commitment to community upliftment and championing diversity. By shopping with us, you empower hundreds of women of color who are integral to our production process. Our dedicated artisans, the heartbeat of ZIPCushions, are a testament to our core values of equality and empowerment. With every purchase, you're not just acquiring a product but contributing to a larger cause, ensuring that every cushion you receive is crafted with unmatched skill, passion, and purpose.\n</p>\n<p style=\"color:#3b3d3b;\"><br>\nAt ZIPCushions, our journey is woven with threads of dedication, innovation, and a relentless pursuit of perfection. As we continue to redefine comfort, our promise remains unchanged: to deliver exceptional designs, unparalleled quality, and an experience that feels just right. Because with ZIPCushions, every cushion tells a story; every story is a tale of 'Comfort, Customized for You'.\n<br>\n</p>\n<p style=\"color:#3b3d3b;\">\nWe're not just about crafting cushions; we're about curating experiences is all about turning visions into realities, spaces into experiences, and houses into homes.\n<br>\n</p>\n<p style=\"color:#3b3d3b;\">\nWe're not just about crafting cushions; we're about curating experiences is all about turning visions into realities, spaces into experiences, and houses into homes. From the moment you envision your perfect cushion to the time it graces your space, we ensure a journey that's as seamless as it is memorable, turning visions into realities, spaces into experiences, and houses into homes\n\n</p>\n</body>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 20,
+        "padding_right": 20,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "58318d5f-7a1d-4d84-8bd7-8abd38c0db38": {
+      "type": "index__divider",
+      "disabled": true,
+      "settings": {
+        "divider_style": "short",
+        "divider_width": 2,
+        "divider_color": "rgba(0,0,0,0)",
+        "alignment": "center",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "a5ed3ad2-61d3-47ee-bd07-66c9fb6dbf4d": {
+      "type": "index__html",
+      "disabled": true,
+      "settings": {
+        "html_content": "<center><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FI_veC-ERto?si=NWFn-IKpYIBY9XBK\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe></center>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "11911a35-5692-4475-8a6d-8e139ff3a8b2": {
+      "type": "index__gallery",
+      "blocks": {
+        "template--16844664439026__11911a35-5692-4475-8a6d-8e139ff3a8b2-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_34_eda372ef-2631-4525-958e-52151863aeb9.png",
+            "link": ""
+          }
+        },
+        "template--16844664439026__11911a35-5692-4475-8a6d-8e139ff3a8b2-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_46.png",
+            "link": ""
+          }
+        },
+        "template--16844664439026__11911a35-5692-4475-8a6d-8e139ff3a8b2-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_28.png",
+            "link": ""
+          }
+        },
+        "template--16844664439026__11911a35-5692-4475-8a6d-8e139ff3a8b2-image-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_15.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16844664439026__11911a35-5692-4475-8a6d-8e139ff3a8b2-image-1",
+        "template--16844664439026__11911a35-5692-4475-8a6d-8e139ff3a8b2-image-2",
+        "template--16844664439026__11911a35-5692-4475-8a6d-8e139ff3a8b2-image-3",
+        "template--16844664439026__11911a35-5692-4475-8a6d-8e139ff3a8b2-image-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "gallery_type": "classic",
+        "images_per_row": 4,
+        "crop_images": false,
+        "enable_lightbox": false,
+        "overlay_color": "#000000",
+        "link_color": "#ffffff",
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "xo_gallery_CiATJF": {
+      "type": "xo-gallery",
+      "disabled": true,
+      "settings": {
+        "gallery_id": "2"
+      }
+    },
+    "index_html_bFzjnt": {
+      "type": "index__html",
+      "disabled": true,
+      "settings": {
+        "html_content": "<style>\n  .sunbrella-table {\n    width: 100%;\n    border-collapse: collapse;\n  }\n  .sunbrella-table th,\n  .sunbrella-table td {\n    border: 1px solid #000;\n    padding: 8px;\n    text-align: left;\n  }\n  .sunbrella-table th {\n    background-color: green;\n    color: white;\n  }\n</style>\n\n<table class=\"sunbrella-table\">\n  <thead>\n    <tr>\n      <th>Highlights</th>\n      <th>Wash Care</th>\n      <th>Use</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>UV resistant</td>\n      <td>Machine wash cold</td>\n      <td>Outdoor furniture</td>\n    </tr>\n    <tr>\n      <td>Water repellent</td>\n      <td>Gentle cycle</td>\n      <td>Patio umbrellas</td>\n    </tr>\n    <tr>\n      <td>Mold resistant</td>\n      <td>Do not bleach</td>\n      <td>Outdoor cushions</td>\n    </tr>\n    <tr>\n      <td>Fade resistant</td>\n      <td>Hang to dry</td>\n      <td>Boat covers</td>\n    </tr>\n    <tr>\n      <td>Durable</td>\n      <td>Iron on low heat</td>\n      <td>Awning fabric</td>\n    </tr>\n  </tbody>\n</table>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "17138927027022142f": {
+      "type": "apps",
+      "blocks": {
+        "xo_gallery_xo_gallery_Bpt4Kh": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "disabled": true,
+          "settings": {
+            "type": "gallery",
+            "id": 26,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "xo_gallery_xo_gallery_Bpt4Kh"
+      ],
+      "disabled": true,
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_html_dw9DPH": {
+      "type": "index__html",
+      "disabled": true,
+      "settings": {
+        "html_content": "<style>\n  .sunbrella-table {\n    width: 100%;\n    border-collapse: collapse;\n  }\n  .sunbrella-table th,\n  .sunbrella-table td {\n    border: 1px solid #000;\n    padding: 8px;\n    text-align: left;\n  }\n  .sunbrella-table th {\n    background-color: green;\n    color: white;\n  }\n</style>\n\n<table class=\"sunbrella-table\">\n  <thead>\n    <tr>\n      <th>Highlights</th>\n      <th>Wash Care</th>\n      <th>Use</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>UV resistant</td>\n      <td>Machine wash cold</td>\n      <td>Outdoor furniture</td>\n    </tr>\n    <tr>\n      <td>Water repellent</td>\n      <td>Gentle cycle</td>\n      <td>Patio umbrellas</td>\n    </tr>\n    <tr>\n      <td>Mold resistant</td>\n      <td>Do not bleach</td>\n      <td>Outdoor cushions</td>\n    </tr>\n    <tr>\n      <td>Fade resistant</td>\n      <td>Hang to dry</td>\n      <td>Boat covers</td>\n    </tr>\n    <tr>\n      <td>Durable</td>\n      <td>Iron on low heat</td>\n      <td>Awning fabric</td>\n    </tr>\n  </tbody>\n</table>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1713892789d1b5c99a": {
+      "type": "apps",
+      "blocks": {
+        "xo_gallery_xo_gallery_CMPMy9": {
+          "type": "shopify://apps/xo-gallery/blocks/xo-gallery/e61dfbaa-1a75-4e4e-bffc-324f17325251",
+          "disabled": true,
+          "settings": {
+            "type": "gallery",
+            "id": 25,
+            "mid": ""
+          }
+        }
+      },
+      "block_order": [
+        "xo_gallery_xo_gallery_CMPMy9"
+      ],
+      "disabled": true,
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "new_hero_banner_tQH3DX",
+    "all_fabric_new_section_7QP6dR",
+    "0a3efbc1-4cb9-4eb3-ba79-74f9fe3f1f47",
+    "fd53e63e-079f-433a-8906-30981bd6f285",
+    "acc69ba7-c6fc-4b19-b66a-36ebbe298bef",
+    "398d8028-3013-4769-baff-b23244de06ab",
+    "58318d5f-7a1d-4d84-8bd7-8abd38c0db38",
+    "a5ed3ad2-61d3-47ee-bd07-66c9fb6dbf4d",
+    "11911a35-5692-4475-8a6d-8e139ff3a8b2",
+    "xo_gallery_CiATJF",
+    "index_html_bFzjnt",
+    "17138927027022142f",
+    "index_html_dw9DPH",
+    "1713892789d1b5c99a"
+  ]
+}

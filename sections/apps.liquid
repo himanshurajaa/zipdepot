@@ -1,0 +1,378 @@
+{% comment %}
+** Shopify App Wrapper **
+{% endcomment %}
+
+{% assign id = section.id %}
+{% comment %}Layout{% endcomment %}
+{% assign width = section.settings.width %}
+{% assign padding_top = section.settings.padding_top %}
+{% assign padding_bottom = section.settings.padding_bottom %}
+{% assign animation = section.settings.animation | default: 'none' %}
+{% comment %} Advanced {% endcomment %}
+{% assign css_class = section.settings.css_class %}
+{% assign custom_css = section.settings.custom_css %}
+
+{% comment %} Section specific CSS {% endcomment %}
+{% style %}
+  #shopify-section-{{ id }} {
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+    {% if width == 'wide' %}
+      width: 100%;
+    {% endif %}
+  }
+
+  {%
+    render 'css-loop',
+    css: custom_css,
+    id: id
+  %}
+
+{% endstyle %}
+
+{% comment %} HTML markup {% endcomment %}
+{% if canonical_url contains 'zipclub-loyalty-program' %}
+        {% for block in section.blocks %}
+          {% render block %}
+        {% endfor %}  
+{% else %}
+<section
+  class="
+    section
+    {{ section.settings.css_class }}
+    is-width-{{ section.settings.width }}">
+  <div class="product-app--container">
+    <div class="container">
+      <div class="one-whole column">
+        {% for block in section.blocks %}
+          {% render block %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+{% assign globocss = true %}
+{% for block in section.blocks %}
+{% if block contains 'Nzk3NTU=' %}
+{% assign globocss = true %}
+{% endif %}
+{% endfor %} 
+{% if globocss == true %}
+#shopify-section-{{ id }} .header {
+    height: 100%;
+}  
+#shopify-section-{{ id }} .shopify-block .globo-app-extension {
+    padding: 96px 0;
+}
+#shopify-section-{{ id }} .globo-formbuilder {
+    border-radius: 20px;
+    background: #3ebcc1;
+    max-width: 1200px;
+    margin: auto;
+    padding: 77px 103px 99px;
+    align-items: center;
+    position: relative;
+}
+#shopify-section-{{ id }} .globo-formbuilder:before {
+    position: absolute;
+    content: "";
+    background-image: url(https://zipcushions.com/cdn/shop/files/Layer_1.svg?v=1731062247);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    opacity: .3;
+    bottom: 0;
+    left: -190px;
+    width: 100%;
+    height: 100%;
+    background-position: bottom left;
+    top: 0;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .globo-form-app {
+    width: 100%;
+    background: transparent;
+    max-width: none;
+    margin: 0;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--heading-font-family);
+    gap: 30px;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header {
+    padding: 0;
+    width: 45%;
+    margin: 0;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header h3 {
+    color: var(--var-ffffff);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+    margin: 0;
+    text-align: left;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header .description {
+    color: var(--var-ffffff);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 24px;
+    text-align: left;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header .description p{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+}  
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .globo-formbuilder-wizard {
+    width: 55%;
+}
+.globo-form-app .panels {
+    z-index: auto!important;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .globo-form-control {
+    margin-bottom: 16px!important;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .globo-form-control label.globo-label {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #9ca3af;
+    margin: 0;
+    height: auto;
+    max-width: none;
+    left: 0;
+    top: 0;
+    transform: translate(29px,16px) scale(1);
+    font-family: var(--body-font-family)!important;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .globo-form-control label.globo-label span {
+    color: #9ca3af!important;
+    vertical-align: top;
+}
+#shopify-section-{{ id }} .globo-formbuilder .g-container .globo-form-control input, .globo-formbuilder .g-container .globo-form-control textarea, .globo-formbuilder .g-container .globo-form-control select {
+    color: var(--var-000000)!important;
+    font-size: 20px!important;
+    font-weight: 500!important;
+    line-height: 30px!important;
+    border-radius: 8px;
+    background: var(--var-ffffff)!important;
+    padding: 24px 21px 6px!important;
+    border: 0!important;
+    box-shadow: none!important;
+    height: auto!important;
+    font-family: var(--body-font-family)!important;
+}
+#shopify-section-{{ id }} .globo-formbuilder-wizard p:has(a[href="https://globosoftware.net"]) {
+    display: none!important;
+    font-size: 0!important;
+    height: 0!important;
+}
+#shopify-section-{{ id }} .globo-form-app .message.success {
+    margin-bottom: 20px!important;
+}
+#shopify-section-{{ id }} .gfb-style-material_filled .message.success {
+    max-width: calc(100% - 16px)!important;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .gfb__footer {
+    margin-top: 0!important;
+}
+#shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container button.submit {
+    color: var(--var-ffffff);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px !important;!i;!;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 4px;
+    background: var(--var-de5956);
+    padding: 15px 30px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    width: auto;
+    margin: 0;
+    min-height: unset !important;
+    height: unset !important;
+}
+#shopify-section-{{ id }} section {
+    --context-section-spacing-block-start: var(--section-outer-spacing-block);
+    --context-section-spacing-block-end: var(--section-outer-spacing-block);
+    --context-section-spacing-inline: var(--container-gutter);
+    --calculated-section-spacing-block-start: var(--section-spacing-block-start, var(--section-spacing-block, var(--context-section-spacing-block-start)));
+    --calculated-section-spacing-block-end: var(--section-spacing-block-end, var(--section-spacing-block, var(--context-section-spacing-block-end)));
+    --calculated-section-spacing-inline: var(--section-spacing-inline, var(--context-section-spacing-inline));
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--calculated-section-spacing-inline, 0px) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width, 0px)) / 2);
+    --section-stack-spacing-inline: var(--section-inner-spacing-inline, 0px);
+    padding-inline-start: max(var(--calculated-section-spacing-inline),50% - var(--container-max-width) / 2);
+    padding-inline-end: max(var(--calculated-section-spacing-inline),50% - var(--container-max-width) / 2);
+}
+#shopify-section-{{ id }} section {
+    padding-block-start: calc(var(--background-differs-from-previous) * var(--calculated-section-spacing-block-start));
+    padding-block-end: var(--calculated-section-spacing-block-end);
+}
+  
+@media (max-width: 1024px) {
+    #shopify-section-{{ id }} .shopify-block .globo-app-extension {
+        padding: 64px 0;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder {
+        padding: 50px;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder:before,
+    #shopify-section-{{ id }} .contact_form_sec:before {
+        background-size: 500px;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container {
+        flex-direction: column;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .globo-formbuilder-wizard,
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header {
+        width: 100%;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header {
+        padding: 0 8px;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header h3,
+    #shopify-section-{{ id }} .contact_form_sec .prose p {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header .description {
+        font-size: 36px;
+        margin-top: 16px;
+    }
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header .description p{
+        font-size: 36px;
+    }
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .globo-formbuilder-wizard,
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #shopify-section-{{ id }} .shopify-block .globo-app-extension {
+        padding: 48px 0;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder {
+        padding: 35px 27px;
+    }
+}
+
+@media (max-width: 575px) {
+    #shopify-section-{{ id }} .globo-formbuilder {
+        padding: 30px 17px 40px;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header h3 {
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .g-container .header .description p{
+        font-size: 32px;
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .globo-form .globo-form-control label.globo-label {
+        transform: translate(24px, 11px) scale(1);
+    }
+
+    #shopify-section-{{ id }} .globo-formbuilder .g-container .globo-form-control input,
+    #shopify-section-{{ id }} .globo-formbuilder .g-container .globo-form-control textarea,
+    #shopify-section-{{ id }} .globo-formbuilder .g-container .globo-form-control select {
+        padding: 18px 21px 4px !important;
+    }
+}  
+{% endif %}
+</style>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "App wrapper",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "width",
+        "label": "Width",
+        "options": [
+          {
+            "value": "standard",
+            "label": "Standard"
+          },
+          {
+            "value": "wide",
+            "label": "Wide"
+          }
+        ],
+        "default": "standard"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Top spacing",
+        "min": 0,
+        "max": 80,
+        "default": 20,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Bottom spacing",
+        "min": 0,
+        "max": 80,
+        "default": 20,
+        "unit": "px"
+      },
+      {
+        "type": "header",
+        "content": "Advanced",
+        "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_css",
+        "label": "Custom CSS"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "@app"
+      }
+    ],
+    "presets": [
+      {
+        "name": "App wrapper"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layouthub | The next generation of page builder [layouthub-duc.myshopify.com](layouthub-duc)  </title>
+<script src="/cdn-cgi/apps/head/wcbxzhKdEYn29vCcUcF6B9gV9Tw.js"></script><link rel="shortcut icon" type="image/png" href="/core/assets/images/logo.png" />
+<style>
+            html{
+                    height: 100%;
+                    font-size: 62.5%;
+                    -webkit-text-size-adjust: 100%;
+                    -ms-text-size-adjust: 100%;
+                    text-size-adjust: 100%;
+                    text-rendering: optimizeLegibility;
+            }
+            div[is="startup"]{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                text-align: center;
+            }
+            div[is="startup"] img{
+                height: 50px;
+            }
+            div[is="startup"] text{
+                display: block;
+                font-size: 1.5rem;
+                letter-spacing: 0.15rem;
+                margin-top: 1.5rem;
+                    display: block;
+                font-size: 1.8rem;
+                letter-spacing: 0.15rem;
+                margin-top: 1.5rem;
+                font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+
+            }
+            img.bounce {
+                animation: bounce .8s ease-in infinite;
+            }
+            @keyframes  bounce {
+               0% {
+                    transform: translateY(0) scale(1.15,.8)
+                }
+
+                20% {
+                    transform: translateY(-35px) scaleY(1.1)
+                }
+
+                50% {
+                    transform: translateY(-50px) scale(1)
+                }
+
+                80% {
+                    transform: translateY(-35px) scale(1)
+                }
+
+                to {
+                    transform: translateY(0) scale(1.15,.8)
+                }
+            }
+             
+        </style>
+<link href="/css/app.css?id=bddcddae501b965d160e" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="app">
+<div is="startup"><img src="/core/assets/images/logo.png" class="bounce"><text>Initializing...</text></div>
+</div>
+<div class="lh-popup">
+<div id="popup1" class="overlay">
+<div class="popup">
+<a class="close" href="#">&times;</a>
+<div class="content">
+<div class="lh-top-banner">
+<img src="images/img_people.svg" alt="Banner">
+</div>
+<div class="lh-row">
+<div class="lh-col-md-6 lh-col-sm-12">
+<div style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb;">
+<h3 class="Polaris-Heading">Layouthub Private Facebook Group</h3></div>
+<div style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb;">
+<div class="Polaris-TextContainer">
+<p>Let connecty and talk with all people about Ecommerce
+</p>
+</div>
+</div>
+<div class="text-center" style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb;"><a type="button" href="https://www.facebook.com/layouthub/" target="_blank" class="Polaris-Button Polaris-Button--sizeLarge  Polaris-Button--primary btn-left"><span class="Polaris-Button__Content"><span class="Polaris-Button__Text">Join now</span></span></a></div>
+</div>
+<div class="lh-col-md-6 lh-col-sm-12">
+<div style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb;">
+<h3 class="Polaris-Heading">Affiliates & Partners <br> Program</h3></div>
+<div style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb;">
+<div class="Polaris-TextContainer">
+<p>Earn up to <span class="text-danger">55%</span> commission on once referrals</p>
+</div>
+</div>
+<div class="text-center" style="--top-bar-background:#00848e; --top-bar-background-lighter:#1d9ba4; --top-bar-color:#f9fafb;"><a href="https://www.layouthub.com/affiliate-program/" target="_blank" type="button" class="Polaris-Button Polaris-Button--sizeLarge  Polaris-Button--primary btn-right"><span class="Polaris-Button__Content"><span class="Polaris-Button__Text">Join now</span></span></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="8512f63356596e2062abd6a8-text/javascript">
+                        window.Layouthub = {"baseUrl":"https:\/\/dev.layouthub.com","csrfToken":"8V7OfTkMZqD3Cby26XRFFEou3ERrJyHG9SDbcL6x","shop":{"id":32400736388,"plan_id":2,"shopify_domain":"layouthub-duc.myshopify.com","freemium":false,"plan":{"id":2,"type":1,"name":"Pro","price":24.7,"capped_amount":null,"terms":"3 months Premium trial","trial_days":90,"test":true,"on_install":false,"created_at":null,"updated_at":null},"name":"layouthub-duc","email":"support@layouthub.com","domain":"layouthub-duc.myshopify.com","province":null,"country":"VN","address1":"Thai Nguyen - Viet Nam","zip":"250000","city":"Thai Nguyen","source":null,"phone":null,"latitude":21.580678,"longitude":105.835092,"primary_locale":"en","address2":null,"created_at":"2020-01-30T21:16:36-05:00","updated_at":"2020-03-23T22:34:38-04:00","country_code":"VN","country_name":"Vietnam","currency":"VND","customer_email":"support@layouthub.com","timezone":"(GMT-05:00) Eastern Time (US & Canada)","iana_timezone":"America\/New_York","shop_owner":"Layout Hub","money_format":"{{amount_no_decimals_with_comma_separator}}\u20ab","money_with_currency_format":"{{amount_no_decimals_with_comma_separator}} VND","weight_unit":"kg","province_code":null,"taxes_included":false,"tax_shipping":null,"county_taxes":true,"plan_display_name":"Developer Preview","plan_name":"partner_test","has_discounts":false,"has_gift_cards":false,"myshopify_domain":"layouthub-duc.myshopify.com","google_apps_domain":null,"google_apps_login_enabled":null,"money_in_emails_format":"{{amount_no_decimals_with_comma_separator}}\u20ab","money_with_currency_in_emails_format":"{{amount_no_decimals_with_comma_separator}} VND","eligible_for_payments":false,"requires_extra_payments_agreement":false,"password_enabled":false,"has_storefront":true,"eligible_for_card_reader_giveaway":false,"finances":true,"primary_location_id":38955516036,"cookie_consent_level":"implicit","visitor_tracking_consent_preference":"allow_all","force_ssl":true,"checkout_api_supported":false,"multi_location_enabled":true,"setup_required":false,"pre_launch_enabled":false,"enabled_presentment_currencies":["VND"],"publish":false,"darkmode":false,"enable_jquery":true,"storefront_password":null},"api":{"":"\/ajax\/analytics\/test","search":"\/ajax\/search","settings.analytic":"\/ajax\/settings\/analytic","settings":"\/ajax\/settings","restore":"\/ajax\/restore","integrate":"\/ajax\/integrate","integrate-test":"\/ajax\/integrate-test","integrate-delete":"\/ajax\/integrate\/delete\/{platform}","integrate-duplicate":"\/ajax\/integrate\/duplicate\/{platform}","integrate-item":"\/ajax\/integrate\/item\/{platform}","integrate-edit":"\/ajax\/integrate\/edit","subscribers":"\/ajax\/subscribers","subscriber-delete":"\/ajax\/subscriber-delete","subscriber-export":"\/ajax\/subscriber-export","subscriber-new":"\/ajax\/subscriber-new","referral-list":"\/ajax\/referral-list","referral-statistic":"\/ajax\/referral-statistic","referral-payout":"\/ajax\/referral-payout","analytic":"\/ajax\/analytics\/{layout}","article-pages-delete":"\/ajax\/article-pages\/delete\/{layout}","article-pages-duplicate":"\/ajax\/article-pages\/duplicate\/{layout}","article-pages-make-default":"\/ajax\/article-pages\/make-default\/{layout}","article-pages-restore":"\/ajax\/article-pages\/restore","article-pages-get-articles":"\/ajax\/article-pages\/get-articles","article-pages-set-template":"\/ajax\/article-pages\/set-template","article-pages":"\/ajax\/article-pages","blog-pages-delete":"\/ajax\/blog-pages\/delete\/{layout}","blog-pages-duplicate":"\/ajax\/blog-pages\/duplicate\/{layout}","blog-pages-make-default":"\/ajax\/blog-pages\/make-default\/{layout}","blog-pages-restore":"\/ajax\/blog-pages\/restore","blog-pages-get-blogs":"\/ajax\/blog-pages\/get-blogs","blog-pages-set-template":"\/ajax\/blog-pages\/set-template","blog-pages":"\/ajax\/blog-pages","collection-pages-delete":"\/ajax\/collection-pages\/delete\/{layout}","collection-pages-duplicate":"\/ajax\/collection-pages\/duplicate\/{layout}","collection-pages-make-default":"\/ajax\/collection-pages\/make-default\/{layout}","collection-pages-restore":"\/ajax\/collection-pages\/restore","collection-pages-get-collections":"\/ajax\/collection-pages\/get-collections","collection-pages-set-template":"\/ajax\/collection-pages\/set-template","collection-pages":"\/ajax\/collection-pages","product-pages-delete":"\/ajax\/product-pages\/delete\/{layout}","product-pages-duplicate":"\/ajax\/product-pages\/duplicate\/{layout}","product-pages-make-default":"\/ajax\/product-pages\/make-default\/{layout}","product-pages-restore":"\/ajax\/product-pages\/restore","product-pages-get-products":"\/ajax\/product-pages\/get-products","product-pages-set-template":"\/ajax\/product-pages\/set-template","product-pages":"\/ajax\/product-pages","home-pages-delete":"\/ajax\/home-pages\/delete\/{layout}","home-pages-duplicate":"\/ajax\/home-pages\/duplicate\/{layout}","home-pages-make-default":"\/ajax\/home-pages\/make-default\/{layout}","home-pages-restore":"\/ajax\/home-pages\/restore","home-pages":"\/ajax\/home-pages","rename":"\/ajax\/recents\/rename","recents":"\/ajax\/recents","pages-delete":"\/ajax\/pages\/delete\/{page}","pages-duplicate":"\/ajax\/pages\/duplicate\/{page}","pages-as-home":"\/ajax\/pages\/page-as-home\/{page}","getPages":"\/ajax\/pages\/pages","pages":"\/ajax\/pages","password-pages-delete":"\/ajax\/password-pages\/delete\/{layout}","password-pages-duplicate":"\/ajax\/password-pages\/duplicate\/{layout}","password-pages-make-default":"\/ajax\/password-pages\/make-default\/{layout}","password-pages-restore":"\/ajax\/password-pages\/restore","password-pages":"\/ajax\/password-pages","downgradePlan":"https:\/\/dev.layouthub.com\/downgrade-plan"},"password_enabled":false,"layout_count":46,"trial_end_at":null,"flash":false,"error":null};
+        </script>
+<script src="https://dev.layouthub.com/js/manifest.js" type="8512f63356596e2062abd6a8-text/javascript"></script>
+<script src="https://dev.layouthub.com/js/vendor.js" type="8512f63356596e2062abd6a8-text/javascript"></script>
+<script src="https://dev.layouthub.com/js/app.js" type="8512f63356596e2062abd6a8-text/javascript"></script>
+
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="8512f63356596e2062abd6a8-|49" defer=""></script></body>
+</html> 

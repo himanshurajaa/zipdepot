@@ -1,0 +1,302 @@
+<style>
+#shopify-section-{{ section.id }} .newcontainer {
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);
+    margin-inline-start: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
+    margin-inline-end: max(var(--container-gutter), 50% - var(--container-max-width) / 2)
+}
+
+
+#shopify-section-{{ section.id }} .our_stories_sec h2 {
+    color: var(--var-000000);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1.08px;
+    margin-bottom: 25px
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .slide_item .product_type {
+    color: #8a8892;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23px;
+    text-transform: uppercase;
+    display: none
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .slide_item h3 {
+    color: var(--var-000000);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin: 0 0 15px
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .slide_item p {
+    color: #1a191e;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: none
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .slide_item .item_content {
+    padding: 25px 15px 0
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .slide_item .main_img {
+    width: 100%;
+    /* height: 100%; */
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 20px
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec {
+    overflow: hidden;
+    padding: 30px 0 70px
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .owl-carousel .owl-stage-outer {
+    overflow: visible
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .slider_wrapper {
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .slider_wrapper::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: -100vw;
+    background-color: var(--var-ffffff);
+    z-index: 2
+}
+
+#shopify-section-{{ section.id }} .our_stories_sec .owl-carousel {
+    padding-right: 150px
+}
+
+@media(max-width:1200px) {
+    #shopify-section-{{ section.id }} .our_stories_sec .owl-carousel {
+        padding-right: 100px
+    }
+
+    #shopify-section-{{ section.id }} .our_stories_sec .slide_item .item_content {
+        padding: 20px 0 0
+    }
+}
+
+@media(max-width:1024px) {
+    #shopify-section-{{ section.id }} .our_stories_sec h2, {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0
+    }
+}
+
+@media(max-width:767px) {
+    #shopify-section-{{ section.id }} .our_stories_sec .owl-carousel {
+        padding-right: 70px
+    }
+}
+
+@media(max-width:575px) {
+    #shopify-section-{{ section.id }} .our_stories_sec .slide_item h3 {
+        font-size: 20px
+    }
+    #shopify-section-{{ section.id }} .our_stories_sec {
+        padding: 30px 0 40px
+    }
+
+    #shopify-section-{{ section.id }} .our_stories_sec h2{
+        margin-bottom: 20px;
+        font-size: 28px;
+        line-height: 38px
+    }
+
+    #shopify-section-{{ section.id }} .our_stories_sec .owl-carousel {
+        padding-right: 60px
+    }
+} 
+.owl-carousel,
+.owl-carousel .owl-item {
+    -webkit-tap-highlight-color: transparent;
+    position: relative
+}
+
+.owl-carousel {
+    display: none;
+    width: 100%;
+    z-index: 1
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    touch-action: manipulation;
+    -moz-backface-visibility: hidden
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0)
+}
+
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0)
+}
+
+.owl-carousel .owl-item {
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%
+}
+
+.owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+    display: none
+}
+
+.owl-carousel.owl-loaded {
+    display: block
+}
+
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+</style>
+<div class="our_stories_sec">
+    <div class="newcontainer">
+        <div class="main_wrapper">
+            <h2>{{ section.settings.section_title }}</h2>
+            <div class="slider_wrapper">
+                <div class="owl-carousel owl-theme">
+                    {% for block in section.blocks %}
+                        {% assign blog_post = block.settings.article %}
+                        <div class="item">
+                            <div class="slide_item">
+                                <img class="main_img" src="{{ blog_post.image | img_url: 'master' }}" alt="">
+                                <div class="item_content">
+                                    <div class="product_type">
+                                        {% for tag in blog_post.tags %}
+                                            {{ tag }}
+                                        {% endfor %}
+                                    </div>
+                                    <h3>{{ blog_post.title }}</h3>
+                                    <p>{{ blog_post.excerpt }}</p>    
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    jQuery('.our_stories_sec .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                576:{
+                    items:2
+                },
+                1025:{
+                    items:3
+                }
+            }
+        });  
+</script>
+{% schema %}
+    {
+      "name": "Custom Stories",
+      "settings": [
+        {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Stories to Help You Bring Your Vision Home"
+        }
+      ],
+      "max_blocks": 5,
+      "blocks": [
+            {
+                "type": "slider",
+                "name": "Slide Item",
+                "settings": [
+                    {
+                        "type": "article",
+                        "id": "article",
+                        "label": "Article"
+                    }
+                ]
+            }
+      ],
+      "presets": [
+        {
+          "name": "Custom Stories"
+        }
+      ]
+    }
+  {% endschema %}

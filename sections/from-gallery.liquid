@@ -1,0 +1,52 @@
+<div class="from-galley-section">
+        <div class="container">
+         <div class="from-galley-row"> 
+          <h3>
+           {{ section.settings.title }}
+          </h3>
+          
+          <div class="from-galley-list">
+           
+            <ul>
+             {% for block in section.blocks %}
+              <li {{ block.shopify_attributes }}>
+                <img src="{{ block.settings.content-img | img_url: '500x400' }}" /> 
+<!--                 <h4> {{ block.settings.box-title }} </h4> 
+                <p> {{ block.settings.content-list-box  | escape }} </p> -->
+               </li>
+             {% endfor %} 
+            </ul>
+            
+          </div>
+
+         </div>
+        </div>    
+</div>
+
+
+{% schema %}
+  {
+    "name": "From Gallery",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "box-item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "content-img",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,368 @@
+{% comment %}
+** Cushion box - dynamic **
+- Draggable section
+- Uses blocks
+cushion box by rajeev
+{% endcomment %}
+
+{% comment %} Content settings {% endcomment %}
+{%- assign blocks = section.blocks -%}
+{% comment %} End content settings {% endcomment %}
+
+
+{% if section.settings.align_height %}
+  {%- assign collection_height = section.settings.collection_height -%}
+{% endif %}
+
+{%- capture section_css -%}
+  {% if section.settings.align_height != blank %}
+    .placeholder-svg {
+      height: {{ collection_height }}px;
+      max-height: {{ collection_height }}px;
+    }
+  {% endif %}
+
+{%- endcapture -%}
+
+{% comment %} Section specific CSS {% endcomment %}
+{% style %}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    {% if section.settings.width == 'wide' %}
+      width: 100%;
+    {% endif %}
+  }
+  {% render 'css-loop',
+          css: section_css,
+          id: section.id
+  %}
+  {% render 'css-loop',
+          css: section.settings.custom_css,
+          id: section.id
+  %}
+{% endstyle %}
+
+<section class="section
+                {{ section.settings.css_class }}
+                is-width-{{ section.settings.width }}
+                {% if section.settings.show_gutter == false %}
+                  has-no-side-gutter
+                  has-background
+                {% else %}
+                  has-gutter-enabled
+                {% endif %}
+                {% if blocks.size > section.settings.collections_per_row %}
+                  has-multirow-blocks
+                {% endif %}
+                "
+                {% if section.settings.animation != "none" %}
+                  data-scroll-class="{{ section.settings.animation }}"
+                {% endif %}>
+
+  <div class="container">
+    {% if blocks.size > 0 %}
+
+      {% for block in blocks %}
+
+        {% comment %} Content settings {% endcomment %}
+        {%- assign image = block.settings.image -%}
+    	{%- assign secondary_image = block.settings.second_image -%}
+        {%- assign title = block.settings.title -%}
+        {%- assign button_label = block.settings.button_label -%}
+        {% if block.settings.button_url != blank %}
+        	{%- assign button_link = block.settings.button_url -%}
+        {% else %}
+        	{%- assign button_link = '#' -%}
+        {% endif %}
+        {% comment %} End content settings {% endcomment %}
+
+        {% if image != blank and secondary_image != blank %}
+          {%- assign collection_image = image -%}
+          {%- assign collection_image_alt = image.alt | escape -%}
+        {% endif %}
+    	
+    	{% if secondary_image != blank %}
+          {%- assign secondary_collection_image = secondary_image -%}
+          {%- assign secondary_collection_image_alt = secondary_image.alt | escape -%} 
+        {% endif %}
+
+        <div class="column
+                    {% render 'column-width', value: section.settings.collections_per_row %}
+                    thumbnail
+                    {% if section.settings.align_height %}
+                      list-collection--align-height
+                    {% endif %}
+                    {% if section.settings.show_gutter == true %}
+                      has-gutter
+                      has-gutter--mobile
+                    {% endif %}
+                    list-collection__thumbnail cushion-collection__thumbnail 
+                    medium-down--one-whole">
+
+          <div class="product-wrap cushion-wrap">
+			<a href="{{ button_link }}">
+              <div class="primary_image">
+                {% if collection_image != blank %}
+                  <div class="thumbnail image__container has-image-crop">
+                    {% render 'image-element',
+                            image: collection_image.src,
+                            alt: collection_image_alt,
+                            image_crop: false,
+                            max_height: collection_height
+                    %}
+                  </div>
+                {% else %}
+                  {% capture num %}{% cycle "1", "2", "3", "4", "5", "6" %}{% endcapture %}
+                  {{ 'collection-' | append: num | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+
+              <div class="secondary_image">
+                {% if secondary_collection_image != blank %}
+                  <div class="thumbnail image__container has-image-crop">
+                    {% render 'image-element',
+                            image: secondary_collection_image.src,
+                            alt: secondary_collection_image,
+                            image_crop: false,
+                            max_height: collection_height
+                    %}
+                  </div>
+                {% else %}
+                  {% capture num %}{% cycle "1", "2", "3", "4", "5", "6" %}{% endcapture %}
+                  {{ 'collection-' | append: num | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+            </a>
+            <a class="collection-info__caption" href="{{ button_link }}">
+              {% if section.settings.collection_title_below_image == blank %}
+                <div class="collection-info__caption-wrapper">
+                  <span class="title">
+                    {{ title }}
+                  </span>
+                  {% render 'button',
+                          label: button_label,
+                          href: button_link,
+                          style: section.settings.button_style
+                  %}
+                </div>
+              {% endif %}
+            </a>
+          </div>
+        </div>
+
+      {% endfor %}
+
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cushion Box",
+  "class": "chusion-box",
+  "max_blocks": 16,
+  "settings": [
+    {
+      "type": "range",
+      "id": "collections_per_row",
+      "label": "Boxes per row",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "align_height",
+      "label": "Align to height",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "collection_height",
+      "label": "Box image height",
+      "min": 200,
+      "max": 400,
+      "step": 10,
+      "default": 400,
+      "unit": "px",
+      "info": "Applied when 'Align to height' is also enabled. [Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360024344614)"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "default": "button--secondary",
+      "options": [
+        {
+          "value": "button--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "button--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "button--link-style",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "wide",
+          "label": "Wide"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gutter",
+      "label": "Show gutter",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fadeIn",
+          "label": "Fade in"
+        },
+        {
+          "value": "fadeInDown",
+          "label": "Fade in down"
+        },
+        {
+          "value": "fadeInLeft",
+          "label": "Fade in left"
+        },
+        {
+          "value": "fadeInRight",
+          "label": "Fade in right"
+        },
+        {
+          "value": "slideInLeft",
+          "label": "Slide in left"
+        },
+        {
+          "value": "slideInRight",
+          "label": "Slide in right"
+        },
+        {
+          "value": "zoomIn",
+          "label": "Zoom in"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Advanced",
+      "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "box",
+      "name": "Cushion",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Here you can upload main image for Cushion box."
+        },
+        {
+          "type": "image_picker",
+          "id": "second_image",
+          "label": "Secondary Image",
+          "info": "Here You need to upload secondary image which will show on hover."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Cushion"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Customize Now!"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cushion Box",
+      "category": "Collection",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "box"
+        },
+        {
+          "type": "box"
+        },
+        {
+          "type": "box"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

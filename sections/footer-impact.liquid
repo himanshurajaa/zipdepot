@@ -1,0 +1,733 @@
+{%- assign newsletter_block = section.blocks | where: 'type', 'newsletter' | first -%}
+
+{%- if section.blocks.size > 3 -%}
+<style>
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} {
+      {%- if newsletter_block != blank -%}
+        --footer-block-list-gap: var(--spacing-10);
+      {%- endif -%}
+
+      --footer-block-list-justify-content: space-between;
+    }
+  }
+</style>
+{%- endif -%}
+<style>
+#shopify-section-{{ section.id }} .container {
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);
+    margin-inline-start: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    margin-inline-end: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    display: block;
+}  
+#shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper h4,
+#shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links h3,
+#shopify-section-{{ section.id }} .site_footer .footer__newsletter-formi .newsletter-formi label {
+    font-family: Poppins;
+    font-size: 18px;
+    letter-spacing: .99px;
+    text-transform: uppercase;
+    color: var(--var-ffffff);
+    line-height: 28px
+}
+body  #shopify-section-{{ section.id }} .footer_copyright,
+body  #shopify-section-{{ section.id }} .site_footer {
+    display: block !important
+}
+
+#shopify-section-{{ section.id }} .site_footer {
+    background: #242e3d;
+    position: relative;
+    color: var(--var-ffffff);
+    padding: 63px 0 82px
+}
+
+#shopify-section-{{ section.id }} .site_footer .main_wrapper {
+    display: flex;
+    gap: 20px
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer_left {
+    width: 35%
+}
+#shopify-section-{{ section.id }} .footer_review_sec .reputon-carousel {
+    padding: 0;
+}
+#shopify-section-{{ section.id }} .site_footer .footer_right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer__newsletter-formi {
+    margin: 30px 0 40px
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer__newsletter-formi .newsletter-formi {
+    max-width: 284px;
+    gap: 9px
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer__newsletter-formi .newsletter-formi input[type=email] {
+    color: var(--var-000000);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: .825px;
+    border-radius: 10px;
+    background-color: var(--var-ffffff);
+    border: 0;
+    height: auto;
+    padding: 7px 25px
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer__newsletter-formi .newsletter-formi label {
+    font-weight: 700;
+    margin: 0 0 9px;
+    display: block
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer__newsletter-formi .newsletter-formi .submit_btn {
+    color: var(--var-000000);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: .825px;
+    text-transform: uppercase;
+    background-color: var(--var-55C4C4);
+    border-radius: 10px;
+    padding: 7px 26px
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer_left .footer_desc {
+    color: var(--var-ffffff);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: .825px;
+    padding-left: 74px
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer_left .footer_desc a {
+    text-decoration: underline
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper {
+    background-color: #d6f3F314;
+    border-radius: 10px;
+    padding: 27px 80px 27px 140px;
+    width: 50%;
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget {
+    display: flex;
+    gap: 23px
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links {
+    width: 50%;
+    padding-left: 80px
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links ul li a {
+    color: var(--var-ffffff);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: .825px
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links h3 {
+    font-weight: 700;
+    margin-bottom: 20px
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper h4 {
+    font-weight: 700;
+    margin-bottom: 2px
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper p {
+    color: var(--var-ffffff);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: .77px;
+    margin-bottom: 11px
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper p:last-child {
+    margin-bottom: 0
+}
+
+#shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper .phone_wrap a {
+    font-size: 15px;
+    letter-spacing: .825px;
+    font-weight: 700
+}
+
+#shopify-section-{{ section.id }} .site_footer .social-media {
+    gap: 14px
+}
+
+#shopify-section-{{ section.id }} .site_footer .footer_disclaimer p{
+    color: #8a97b0;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 73px
+}
+
+#shopify-section-{{ section.id }} .footer_copyright {
+    background: var(--var-000000);
+    position: relative;
+    color: var(--var-ffffff);
+    padding: 11px 0
+}
+
+#shopify-section-{{ section.id }} .footer_copyright p {
+    color: var(--var-ffffff);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: .4px
+}
+
+#shopify-section-{{ section.id }} .footer_copyright .other_links li a {
+    color: var(--var-ffffff);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: .715px
+}
+
+#shopify-section-{{ section.id }} .footer_copyright .main_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+#shopify-section-{{ section.id }} .footer_copyright .other_links {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+@media(max-width:1200px) {
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper {
+        padding: 27px 27px 27px 80px
+    }
+}
+
+@media(max-width:1024px) {
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links,
+    #shopify-section-{{ section.id }} .site_footer .footer_disclaimer p,
+    #shopify-section-{{ section.id }} .site_footer .footer_left .footer_desc {
+        padding-left: 0
+    }
+    #shopify-section-{{ section.id }} .site_footer .footer_right {
+        width: 54%;
+        gap: 30px
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .footer_left {
+        width: 46%
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .main_wrapper {
+        gap: 35px
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .footer_right .foot_widget:first-child {
+        flex-direction: column
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper {
+        width: 100%
+    }
+
+    #shopify-section-{{ section.id }} .site_footer {
+        padding: 40px 0 60px
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links h3 {
+        margin-bottom: 10px
+    }
+}
+
+@media(max-width:999px) {
+    #shopify-section-{{ section.id }} .site_footer .footer__newsletter-formi {
+        margin: 20px 0 30px
+    }
+}
+
+@media(max-width:767px) {
+    #shopify-section-{{ section.id }} .footer_copyright .main_wrapper {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px
+    }
+
+    #shopify-section-{{ section.id }} .footer_copyright .other_links {
+        gap: 20px
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper {
+        padding: 25px
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .social-media {
+        margin-top: 16px;
+        gap: 12px
+    }
+}
+
+@media(max-width:575px) {
+    #shopify-section-{{ section.id }} .site_footer .main_wrapper {
+        flex-direction: column
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .footer_left,
+    #shopify-section-{{ section.id }} .site_footer .footer_right {
+        width: 100%
+    }
+    #shopify-section-{{ section.id }} .site_footer .footer_left .footer_desc {
+        padding-left: 0
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget {
+        gap: 15px;
+        flex-direction: column;
+        gap: 25px
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .inner_wrapper {
+        padding: 20px;
+        width: 100%
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links {
+        padding-left: 0;
+        width: 100%
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links h3 {
+        margin-bottom: 5px
+    }
+
+    #shopify-section-{{ section.id }} .site_footer .foot_widget .nav_links ul li a {
+        letter-spacing: .6px
+    }
+
+    #shopify-section-{{ section.id }} .site_footer {
+        padding: 40px 0
+    }
+} 
+#shopify-section-{{ section.id }} a {
+ color: var(--var-ffffff);  
+}  
+#shopify-section-{{ section.id }} .social-media {
+    gap: var(--spacing-3) var(--spacing-6);
+    flex-wrap: wrap;
+    display: flex;
+}  
+#shopify-section-{{ section.id }} .site_footer .footer_review_sec .reputon-carousel-holder {
+    display: none;
+}
+#shopify-section-{{ section.id }} .reputon-carousel-footer .reputon-info .reputon-image {
+    display: none;
+}
+#shopify-section-{{ section.id }} .reputon-carousel-container a.reputon-buttons-holder, 
+#shopify-section-{{ section.id }} .reputon-carousel-container .reputon-carousel-footer {
+    align-self: flex-start!important;
+}
+#shopify-section-{{ section.id }} .footer_review_sec .reputon-name {
+    color: #fff;
+}
+#shopify-section-{{ section.id }} .reputon-carousel-footer .reputon-powered-google, footer .reputon-carousel-footer .reputon-content .reputon-reviews-count, footer .reputon-carousel-footer .reputon-content .reputon-link {
+    color: var(--var-ffffff);
+    font-family: var(--body-font-family);
+}
+#shopify-section-{{ section.id }} .footer_review_sec .reputon-rating-stars {
+    color: #de5956;
+} 
+#shopify-section-{{ section.id }}  .footer_review_sec {
+    margin-top: 35px;
+}  
+</style>
+
+<div class="site_footer" style="display: none;">
+    <div class="container">
+        <div class="main_wrapper">
+            <div class="footer_left">
+                <div class="footer_widget">
+                    {%- if section.settings.footer_logo != blank -%}
+                      <a href="/"><img src="{{ section.settings.footer_logo | img_url: 'master' }}" alt=""></a>
+                    {%- endif -%}
+                    
+                    <div class="footer_desc">
+                        <p>{{ section.settings.footer_address }}</p>
+                         {% comment %}<p><a href="mailto: info@zipcushions.com">info@zipcushions.com</a></p> {% endcomment %}
+                        
+                         {%- form 'customer', id: 'footer-newsletter', class: 'footer__newsletter-formi form' -%}
+                          {% if form.posted_successfully? %}
+                            <p class="quote">Subcribed successfully!</p>
+                          {% elsif form.errors %}
+                            <div class="one-whole column contact-form__form-errors">
+                              {% for field in form.errors %}
+                                <p class="form__error">{{ field | capitalize }} - {{ form.errors.messages[field] }}</p>
+                              {% endfor %}
+                            </div>
+                          {% endif %}
+                      
+                          {% comment %} Hidden fields {% endcomment %}
+                          <input type="hidden" name="contact[tags]" value="prospect,newsletter"/>
+                          <input type="hidden" name="challenge" value="false" />
+                      
+                          <div class="newsletter-formi form is-responsive">                      
+                            {% comment %} Email {% endcomment %}
+                            <div class="field is-stretched-width">
+                              <label class="label newsletter__text">Newsletter sign up</label>
+                              <div class="control">
+                                <input class="input" type="email" name="contact[email]" placeholder="Email Address" required>
+                              </div>
+                            </div>
+                            {% comment %} Submit button {% endcomment %}
+                            <div class="field is-default-width is-align-self-end">
+                              <div class="control">
+                                <input type="submit" value="Sign up" class="submit_btn"/>
+                              </div>
+                            </div>
+                          </div>
+                        {% endform %}
+
+
+                        <ul class="social-media " role="list">
+                          {% if section.settings.facebook_link != "" %}
+                            <li>
+                              <a href="{{ section.settings.facebook_link }}" class="tap-area" target="_blank" rel="noopener" aria-label="Follow on Facebook">
+                                <svg role="presentation" focusable="false" width="27" height="27" class="iconi icon-facebook" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.183 21.85v-8.868H7.2V9.526h2.983V6.982a4.17 4.17 0 0 1 4.44-4.572 22.33 22.33 0 0 1 2.667.144v3.084h-1.83a1.44 1.44 0 0 0-1.713 1.68v2.208h3.423l-.447 3.456h-2.97v8.868h-3.57Z" fill="currentColor"></path>
+                                </svg>
+                              </a>
+                            </li>
+                          {% endif %}
+
+                          {% if section.settings.instagram_link != "" %}
+                            <li>
+                              <a href="{{ section.settings.instagram_link }}" class="tap-area" target="_blank" rel="noopener" aria-label="Follow on Instagram"><svg role="presentation" focusable="false" width="27" height="27" class="iconi icon-instagram" viewBox="0 0 24 24">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.4c-2.607 0-2.934.011-3.958.058-1.022.046-1.72.209-2.33.446a4.705 4.705 0 0 0-1.7 1.107 4.706 4.706 0 0 0-1.108 1.7c-.237.611-.4 1.31-.446 2.331C2.41 9.066 2.4 9.392 2.4 12c0 2.607.011 2.934.058 3.958.046 1.022.209 1.72.446 2.33a4.706 4.706 0 0 0 1.107 1.7c.534.535 1.07.863 1.7 1.108.611.237 1.309.4 2.33.446 1.025.047 1.352.058 3.959.058s2.934-.011 3.958-.058c1.022-.046 1.72-.209 2.33-.446a4.706 4.706 0 0 0 1.7-1.107 4.706 4.706 0 0 0 1.108-1.7c.237-.611.4-1.31.446-2.33.047-1.025.058-1.352.058-3.959s-.011-2.934-.058-3.958c-.047-1.022-.209-1.72-.446-2.33a4.706 4.706 0 0 0-1.107-1.7 4.705 4.705 0 0 0-1.7-1.108c-.611-.237-1.31-.4-2.331-.446C14.934 2.41 14.608 2.4 12 2.4Zm0 1.73c2.563 0 2.867.01 3.88.056.935.042 1.443.199 1.782.33.448.174.768.382 1.104.718.336.336.544.656.718 1.104.131.338.287.847.33 1.783.046 1.012.056 1.316.056 3.879 0 2.563-.01 2.867-.056 3.88-.043.935-.199 1.444-.33 1.782a2.974 2.974 0 0 1-.719 1.104 2.974 2.974 0 0 1-1.103.718c-.339.131-.847.288-1.783.33-1.012.046-1.316.056-3.88.056-2.563 0-2.866-.01-3.878-.056-.936-.042-1.445-.199-1.783-.33a2.974 2.974 0 0 1-1.104-.718 2.974 2.974 0 0 1-.718-1.104c-.131-.338-.288-.847-.33-1.783-.047-1.012-.056-1.316-.056-3.879 0-2.563.01-2.867.056-3.88.042-.935.199-1.443.33-1.782.174-.448.382-.768.718-1.104a2.974 2.974 0 0 1 1.104-.718c.338-.131.847-.288 1.783-.33C9.133 4.14 9.437 4.13 12 4.13Zm0 11.07a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm0-8.13a4.93 4.93 0 1 0 0 9.86 4.93 4.93 0 0 0 0-9.86Zm6.276-.194a1.152 1.152 0 1 1-2.304 0 1.152 1.152 0 0 1 2.304 0Z" fill="currentColor"></path>
+                              </svg>
+                              </a>
+                            </li>
+                            {% endif %}
+
+                            {% if section.settings.pinterest_link != "" %}
+                            <li>
+                              <a href="{{ section.settings.pinterest_link  }}" class="tap-area" target="_blank" rel="noopener" aria-label="Follow on Pinterest"><svg role="presentation" focusable="false" width="27" height="27" class="iconi icon-pinterest" viewBox="0 0 24 24">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.765 2.401c3.59-.054 5.837 1.4 6.895 3.95.349.842.722 2.39.442 3.675-.112.512-.144 1.048-.295 1.53-.308.983-.708 1.853-1.238 2.603-.72 1.02-1.81 1.706-3.182 2.052-1.212.305-2.328-.152-2.976-.643-.206-.156-.483-.36-.56-.643h-.029c-.046.515-.244 1.062-.383 1.531-.193.65-.23 1.321-.472 1.929a12.345 12.345 0 0 1-.942 1.868c-.184.302-.692 1.335-1.061 1.347-.04-.078-.057-.108-.06-.245-.118-.19-.035-.508-.087-.766-.082-.4-.145-1.123-.06-1.53v-.643c.096-.442.092-.894.207-1.317.25-.92.39-1.895.648-2.848.249-.915.477-1.916.678-2.847.045-.21-.21-.815-.265-1.041-.174-.713-.042-1.7.176-2.236.275-.674 1.08-1.703 2.122-1.439.838.212 1.371 1.118 1.09 2.266-.295 1.205-.677 2.284-.943 3.49-.068.311.05.641.118.827.248.672 1 1.324 2.004 1.072 1.52-.383 2.193-1.76 2.652-3.246.124-.402.109-.781.206-1.225.204-.935.118-2.331-.177-3.061-.472-1.17-1.353-1.92-2.563-2.328L12.707 4.3c-.56-.128-1.626.064-2.004.183-1.69.535-2.737 1.427-3.388 3.032-.222.546-.344 1.1-.383 1.868l-.03.276c.13.686.144 1.14.413 1.653.132.252.447.451.5.765.032.185-.104.464-.147.613-.065.224-.041.48-.147.673-.192.349-.714.087-.943-.061-1.192-.77-2.175-2.995-1.62-5.144.085-.332.09-.62.206-.919.723-1.844 1.802-2.978 3.359-3.95.583-.364 1.37-.544 2.092-.734l1.149-.154Z" fill="currentColor"></path>
+                              </svg></a>
+                              </li>
+                            {% endif %}
+
+                            {% if section.settings.youtube_link != "" %}
+                              <li>
+                                <a href="{{ section.settings.youtube_link  }}" class="tap-area" target="_blank" rel="noopener" aria-label="Follow on YouTube"><svg role="presentation" focusable="false" width="27" height="27" class="iconi icon-youtube" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.44 5.243c.929.244 1.66.963 1.909 1.876.451 1.654.451 5.106.451 5.106s0 3.452-.451 5.106a2.681 2.681 0 0 1-1.91 1.876c-1.684.443-8.439.443-8.439.443s-6.754 0-8.439-.443a2.682 2.682 0 0 1-1.91-1.876c-.45-1.654-.45-5.106-.45-5.106s0-3.452.45-5.106a2.681 2.681 0 0 1 1.91-1.876c1.685-.443 8.44-.443 8.44-.443s6.754 0 8.438.443Zm-5.004 6.982L9.792 15.36V9.091l5.646 3.134Z" fill="currentColor"></path>
+                                </svg></a>
+                              </li>
+                            {% endif %}
+                            
+                            {% if section.settings.linkedin_link != "" %}
+                              <li>
+                                <a href="{{ section.settings.linkedin_link }}" class="tap-area" target="_blank" rel="noopener" aria-label="Follow on LinkedIn"><svg role="presentation" focusable="false" width="27" height="27" class="iconi icon-linkedin" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.349 5.478a1.875 1.875 0 1 0-3.749 0 1.875 1.875 0 1 0 3.749 0ZM7.092 19.2H3.857V8.78h3.235V19.2ZM12.22 8.78H9.121V19.2h3.228v-5.154c0-1.36.257-2.676 1.94-2.676 1.658 0 1.68 1.554 1.68 2.763V19.2H19.2v-5.715c0-2.806-.605-4.963-3.877-4.963-1.573 0-2.629.863-3.06 1.683h-.044V8.78Z" fill="currentColor"></path>
+                                </svg></a>
+                              </li>
+                          {% endif %}
+                        </ul>
+                    <div class="footer_review_sec">
+                        <script type="text/javascript" src="https://cdn.grw.reputon.com/assets/widget.js?shop=zipcushions.myshopify.com"  defer></script>
+                        <div class="reputon-google-reviews-widget"
+                            data-content-index="1"
+                            data-theme="light"
+                            data-type="carousel"
+                            data-autoscroll="true"
+                            data-show-review-photos="false"
+                            data-write-review="true"
+                            data-show-rating="true"
+                            data-fixed-reviews-height="false"></div>
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="foot_widget">
+                    <div class="inner_wrapper">
+                        {%- if section.settings.footer_widget_1_image != blank -%}
+                          <img src="{{ section.settings.footer_widget_1_image | img_url: 'master' }}" alt="">
+                        {%- endif -%}
+
+                        {% if section.settings.footer_widget_1_title != "" %}
+                          <h4>{{ section.settings.footer_widget_1_title }}</h4>
+                        {% endif %}
+
+                        {% if section.settings.footer_widget_1_email != "" %}
+                          <p class="mail_wrap"><a href="mailto: {{ section.settings.footer_widget_1_email }}">{{ section.settings.footer_widget_1_email }}</a></p>
+                        {% endif %}
+
+                        {% if section.settings.footer_widget_1_phone != "" %}
+                          <p class="phone_wrap"><a href="tel: {{ section.settings.footer_widget_1_phone }}">{{ section.settings.footer_widget_1_phone }}</a><br> {{ section.settings.footer_widget_1_phone_time }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="inner_wrapper">
+                        {%- if section.settings.footer_widget_2_image != blank -%}
+                          <img src="{{ section.settings.footer_widget_2_image | img_url: 'master' }}" alt="">
+                        {%- endif -%}
+
+                        {% if section.settings.footer_widget_2_title != "" %}
+                          <h4>{{ section.settings.footer_widget_2_title }}</h4>
+                        {% endif %}
+
+                        {% if section.settings.footer_widget_2_email != "" %}
+                          <p class="mail_wrap"><a href="mailto: {{ section.settings.footer_widget_2_email }}">{{ section.settings.footer_widget_2_email }}</a></p>
+                        {% endif %}
+
+                        {% if section.settings.footer_widget_2_phone != "" %}
+                          <p class="phone_wrap"><a href="tel: {{ section.settings.footer_widget_2_phone }}">{{ section.settings.footer_widget_2_phone }}</a><br> {{ section.settings.footer_widget_2_phone_time }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="foot_widget">
+                    <div class="nav_links">
+                        {% if section.settings.footer_nav_1_title != "" %}
+                          <h3>{{ section.settings.footer_nav_1_title }}</h3>
+                        {% endif %}
+                        {%- if section.settings.footer_nav_1.links != blank -%}
+                          <ul>
+                            {%- for link in section.settings.footer_nav_1.links -%}
+                              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                    </div>
+                    <div class="nav_links">
+                        {% if section.settings.footer_nav_2_title != "" %}
+                          <h3>{{ section.settings.footer_nav_2_title }}</h3>
+                        {% endif %}
+                        {%- if section.settings.footer_nav_2.links != blank -%}
+                          <ul>
+                            {%- for link in section.settings.footer_nav_2.links -%}
+                              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if section.settings.disclaimer_content != blank %}
+            <div class="footer_disclaimer">
+                {{ section.settings.disclaimer_content }}
+            </div>
+        {% endif %}
+      
+    </div>
+</div>
+<div class="footer_copyright" style="display: none;">
+    <div class="container">
+        <div class="main_wrapper">
+            <div class="inner_left">
+                {{ section.settings.footer_copyright_text }}
+            </div>
+            <div class="inner_right">
+                <ul class="other_links">
+                  {% if section.settings.footer_copyright_text_1 != "" %}
+                    <li><a href="{{ section.settings.footer_copyright_link_1 }}">{{ section.settings.footer_copyright_text_1 }}</a></li>
+                  {% endif %}
+                  {% if section.settings.footer_copyright_text_2 != "" %}
+                    <li><a href="{{ section.settings.footer_copyright_link_2 }}">{{ section.settings.footer_copyright_text_2 }}</a></li>
+                  {% endif %}
+                </ul>  
+            <div>
+        </div>
+    </div>    
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "class": "shopify-section--footer",
+  "tag": "footer",
+  "settings": [
+    {
+        "type" : "image_picker",
+        "id" : "footer_logo",
+        "label" : "Site Logo"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_address",
+        "label" : "Address"
+    },
+    {
+        "type" : "header",
+        "content" : "Social Media Links"
+    },
+    {
+        "type" : "text",
+        "id" : "facebook_link",
+        "label" : "Facebook Link"
+    },
+    {
+        "type" : "text",
+        "id" : "instagram_link",
+        "label" : "Instagram Link"
+    },
+    {
+        "type" : "text",
+        "id" : "pinterest_link",
+        "label" : "Pinterest Link"
+    },
+    {
+        "type" : "text",
+        "id" : "youtube_link",
+        "label" : "YouTube Link"
+    },
+    {
+        "type" : "text",
+        "id" : "linkedin_link",
+        "label" : "Linkedin Link"
+    },
+    {
+        "type" : "header",
+        "content" : "Info Widgets"
+    },
+    {
+        "type" : "image_picker",
+        "id" : "footer_widget_1_image",
+        "label" : "Widget 1 Image"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_widget_1_title",
+        "label" : "Widget 1 Title"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_widget_1_email",
+        "label" : "Widget 1 Email"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_widget_1_phone",
+        "label" : "Widget 1 Phone"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_widget_1_phone_time",
+        "label" : "Widget 1 Phone Timing"
+    },
+    {
+        "type" : "image_picker",
+        "id" : "footer_widget_2_image",
+        "label" : "Widget 2 Image"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_widget_2_title",
+        "label" : "Widget 2 Title"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_widget_2_email",
+        "label" : "Widget 2 Email"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_widget_2_phone",
+        "label" : "Widget 2 Phone"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_widget_2_phone_time",
+        "label" : "Widget 2 Phone Timing"
+    },
+    {
+        "type" : "header",
+        "content" : "Navigations"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_nav_1_title",
+        "label" : "Navigation 1 Title"
+    },
+    {
+        "type": "link_list",
+        "id": "footer_nav_1",
+        "label": "Navigation 1"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_nav_2_title",
+        "label" : "Navigation 2 Title"
+    },
+    {
+        "type": "link_list",
+        "id": "footer_nav_2",
+        "label": "Navigation 2"
+    },
+    {
+        "type" : "header",
+        "content" : "Copyright"
+    },
+    {
+        "type" : "richtext",
+        "id" : "footer_copyright_text",
+        "label" : "Copyright Text"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_copyright_text_1",
+        "label" : "Extra Link Text 1"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_copyright_link_1",
+        "label" : "Extra Link Link 1"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_copyright_text_2",
+        "label" : "Extra Link Text 2"
+    },
+    {
+        "type" : "text",
+        "id" : "footer_copyright_link_2",
+        "label" : "Extra Link Link 2"
+    },
+    {
+        "type": "richtext",
+        "label": "Disclaimer",
+        "id": "disclaimer_content"
+    }
+  ]
+}
+{% endschema %}

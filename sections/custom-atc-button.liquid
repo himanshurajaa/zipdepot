@@ -1,0 +1,65 @@
+<style> 
+#shopify-section-{{ section.id }} .custom_atc_btn.btn_wrap {
+    max-width: 790px;
+    margin: 50px auto auto;
+    padding: 0 20px;
+}
+#shopify-section-{{ section.id }} .custom_atc_btn.btn_wrap a {
+    width: 100%;
+}
+@media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} .button,
+    #shopify-section-{{ section.id }} .btn {
+        padding-block-start: var(--spacing-3);
+        padding-block-end: var(--spacing-3);
+        padding-inline-start: var(--spacing-6);
+        padding-inline-end: var(--spacing-6);
+    }
+}
+#shopify-section-{{ section.id }} .btn_wrap a {
+    color: var(--var-ffffff);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 4px;
+    background: var(--var-de5956);
+    padding: 15px 30px;
+    display: inline-block;
+    vertical-align: top;
+    transition: all .3s ease-in-out;
+    height: unset !important;
+}  
+#shopify-section-{{ section.id }} a:hover {
+    background-color: #b02a26;
+    color: #fff !important;
+} 
+</style>
+{% comment %}{%- capture product_form_id -%}product-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
+{%- render 'buy-buttons', product: product, form_id: product_form_id -%}{% endcomment %}
+<div class="custom_atc_btn btn_wrap">
+  <a href="javascript:;" class="button">Add to cart</a>
+</div>
+<script>
+  jQuery(document).on('click', '.custom_atc_btn a.button, .custom_quick_add_to_cart', function(){
+    const this_btn = jQuery(this);
+    const this_text = this_btn.text();
+    this_btn.text('Please wait...');
+      jQuery(jQuery('[action="/cart/add"] .purchase-details__buttons .button--add-to-cart').get(1)).trigger('click');
+    setTimout(function(){
+      this_btn.text(this_text);
+    }, 400);
+  });  
+</script>
+{% schema %}
+  {
+    "name": "Add to cart Button",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Add to cart button"
+      }
+    ]
+  }
+{% endschema %}

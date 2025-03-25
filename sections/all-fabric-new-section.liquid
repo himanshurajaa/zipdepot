@@ -1,0 +1,1219 @@
+<style>
+#shopify-section-{{ section.id }} .container {
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);
+    margin-inline-start: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    margin-inline-end: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    color: rgb(39 39 39);
+    display: block;
+}
+#shopify-section-{{ section.id }} .btn_wrap a {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 4px;
+    background: #de5956;
+    padding: 15px 30px;
+    display: inline-block;
+    vertical-align: top;
+    transition: all .3s ease-in-out;
+}
+#shopify-section-{{ section.id }} .btn_wrap a:hover {
+    background: #b02a26 !important;  
+}  
+#shopify-section-{{ section.id }} .fabric_filters_sec {
+    padding: 60px 0
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .main_wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: auto;
+    width: 100%
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap {
+    width: 25%;
+    padding-top: 45px;
+    max-width: 320px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .filter_colm {
+    width: 72%;
+    display: flex;
+    gap: 18px;
+    flex-direction: column
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -.03em;
+    margin-bottom: 50px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: Inter
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap .btn_wrap {
+    margin-top: 28px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_wrap ul {
+    display: flex;
+    gap: 45px;
+    border-bottom: 1px solid #d0d0d0
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_wrap ul li a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -.03em;
+    font-family: Inter;
+    color: #7f7d84;
+    transition: all .3s ease-in-out;
+    padding: 12px 10px;
+    display: inline-block;
+    vertical-align: top
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_wrap ul li a:hover,
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_wrap ul li.active a {
+    color: #000
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_top_filter_wrap ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_top_filter_wrap ul li a {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    background: #f7f7f7;
+    border-radius: 15px;
+    min-height: 50px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 55px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    height: 100%
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_top_filter_wrap ul li a.active,
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_top_filter_wrap ul li a:hover {
+    color: #fff;
+    background: #6cbe45
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_items ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_items ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    background: #f7f7f7;
+    border-radius: 15px;
+    min-height: 50px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 55px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    height: 100%
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_items ul li a:hover {
+    color: #fff;
+    background: #6cbe45
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_items ul li a::before {
+    content: '';
+    position: absolute;
+    background-image: url(https://cdn.shopify.com/s/files/1/0614/7453/7714/files/Group_4.svg?v=1734077469);
+    width: 28px;
+    height: 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_items ul li a:hover::before {
+    opacity: 1;
+    visibility: visible
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap .btn_wrap a {
+    width: 100%;
+    max-width: 280px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .main_row {
+    display: flex;
+    flex-direction: column;
+    gap: 120px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item {
+    background: #f7f7f7;
+    border-radius: 20px;
+    padding: 35px 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 1144px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .subtitle {
+    margin: 0 0 32px;
+    font-size: 20px
+}
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .subtitle p {
+    font-size: 20px
+}
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item>h3 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: -.03em;
+    margin: 0
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .list_ul {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 20px;
+    flex-grow: unset !important;
+    border: unset !important;
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .list_ul li {
+    width: 33.333%;
+    position: relative;
+    display: block !important;
+    margin-top: 0;
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .list_ul li a {
+    background: #e1e4e6;
+    border-radius: 15px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: center;
+    padding: 16px 10px;
+    display: flex;
+    height: 100%;
+    color: #7f7d84;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content:not(:first-of-type) {
+    display: none
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px 15px 0 0
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .list_ul li.active a {
+    background: #fff;
+    border-radius: 15px 15px 0 0;
+    color: #000
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .list_ul li.active::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: -35px;
+    height: 35px;
+    background-color: #fff
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content h5 {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 15px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content ul {
+    margin-bottom: 15px;
+    display: block;
+    border: unset;
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content ul li {
+    position: relative;
+    padding-left: 15px;
+    margin: 0 !important;
+    display: block;
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content ul li::before {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 100%;
+    top: 11px;
+    left: 0
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .fabric_tb_wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .fabric_tb_wrap::before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    top: 100px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .fabric_tb_wrap .tabs {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .other_fabric_sample {
+    grid-column: span 2;
+    padding: 25px 0;
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .other_fabric_sample .inner_wrapper {
+    background: #55c4c4;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 833px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 320px;
+    justify-content: center
+}
+
+#shopify-section-{{ section.id }} .other_fabric_sample .inner_wrapper h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #fff
+}
+#shopify-section-{{ section.id }} .other_fabric_sample .inner_wrapper h2 p {
+    font-size: 30px;
+}
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option {
+    width: calc(20% - 20px);
+    margin: 10px;
+    position: static
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .inner_col:before {
+    position: absolute;
+    content: '';
+    inset: -4px;
+    border: 1px solid gray;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 4px #00000040
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .inner_col:hover:before {
+    opacity: 1;
+    visibility: visible
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .inner_col:hover {
+    cursor: pointer
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .inner_col {
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option img.thumbnail_img {
+    border-radius: 0;
+    aspect-ratio: 1;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    border: 0
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option:has(input:checked) img.thumbnail_img {
+    border: 1px solid var(--var-000000);
+    box-shadow: 0 4px 4px #00000040;
+    padding: 3px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow {
+    background-color: #fff;
+    border-radius: 0 0 15px 15px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_pagination {
+    color: #1a191e;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -.42px;
+    display: inline-flex;
+    width: 100%;
+    text-align: right;
+    margin-top: 30px;
+    justify-content: flex-end;
+    gap: 15px;
+    position: relative
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_pagination .next_page,
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_pagination .prev_page {
+    background-image: url(https://cdn.shopify.com/s/files/1/0614/7453/7714/files/nav-arrow.svg?v=1731410353);
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_pagination .prev_page {
+    transform: scaleX(-1)
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_pagination .disabled {
+    opacity: .25;
+    cursor: no-drop;
+    pointer-events: none
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .field_label {
+    border: 1px solid #e4e4e4;
+    position: absolute;
+    box-shadow: 0 10px 30px 10px #0000001A;
+    background-color: #fff;
+    left: 10px;
+    right: 10px;
+    padding: 26px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    top: calc(var(--pop_top) + 35px);
+    transition: all .2s ease-in-out;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option:hover .field_label {
+    opacity: 1;
+    visibility: visible
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .field_label img {
+    width: 50%;
+    aspect-ratio: 1;
+    object-fit: cover
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .field_label span {
+    font-family: Host Grotesk;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px
+}
+
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item:not(.options-list .field_option) .tab_content {
+    padding-bottom: 0
+}
+
+@media(max-width:1200px) {
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow {
+        padding: 0 25px 30px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item {
+        padding: 30px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content {
+        padding: 25px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .filter_colm {
+        width: 69%
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap {
+        width: 31%
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap {
+        padding-top: 0
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_items ul {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_wrap ul {
+        gap: 20px;
+        justify-content: space-between
+    }
+}
+
+@media(max-width:1024px) {
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .fabric_tb_wrap::before {
+        opacity: 0
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm {
+        grid-template-columns: 1fr
+    }
+
+    #shopify-section-{{ section.id }} .other_fabric_sample {
+        grid-column: unset
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .main_wrapper {
+        flex-direction: column
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .filter_colm {
+        width: 100%
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap h2 {
+        margin-bottom: 15px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap {
+        width: 100%;
+        max-width: none
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap .btn_wrap a {
+        width: auto
+    }
+}
+
+@media(max-width:767px) {
+    #shopify-section-{{ section.id }} .other_fabric_sample .inner_wrapper {
+        padding: 20px;
+        min-height: 280px
+    }
+
+    #shopify-section-{{ section.id }} .other_fabric_sample .inner_wrapper h2 {
+        font-size: 28px;
+        line-height: 40px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .main_row {
+        gap: 60px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item>h3 {
+        font-size: 30px;
+        line-height: 42px;
+        letter-spacing: 0;
+        margin: 0 0 25px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_pagination {
+        margin-top: 10px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_items ul {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    #shopify-section-{{ section.id }} .btn_wrap a {
+        font-size: 15px;
+        padding: 11px 20px
+    }
+}
+
+@media(max-width:575px) {
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow {
+        padding: 0 15px 20px
+    }
+
+    #shopify-section-{{ section.id }} .other_fabric_sample {
+        padding: 0
+    }
+
+    #shopify-section-{{ section.id }} .other_fabric_sample .inner_wrapper h2 {
+        font-size: 26px;
+        line-height: 36px
+    }
+
+    #shopify-section-{{ section.id }} .other_fabric_sample .inner_wrapper h2 br {
+        display: none
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .field_label {
+        padding: 15px;
+        gap: 15px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .field_label span {
+        font-size: 16px;
+        font-weight: 600;
+        width: 60%
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option .field_label img {
+        width: 40%
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .list_ul li.active::before {
+        bottom: -25px;
+        height: 30px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .list_ul {
+        gap: 10px;
+        margin-bottom: 10px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item {
+        padding: 20px;
+        min-height: 939px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item>h3 {
+        font-size: 28px;
+        line-height: 40px;
+        margin: 0 0 20px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content {
+        padding: 15px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item .tab_content h5 {
+        font-size: 18px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list .field_option {
+        width: calc(25% - 10px);
+        margin: 5px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .fabricSectionShow .options-list {
+        margin: 0 -5px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_pagination {
+        margin-top: 15px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap h2 {
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 0
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .title_wrap p {
+        font-size: 18px;
+        line-height: 28px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_wrap ul {
+        gap: 0;
+        justify-content: flex-start;
+        flex-wrap: wrap
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_wrap ul li a {
+        padding: 10px 10px
+    }
+
+    #shopify-section-{{ section.id }} .fabric_filters_sec .dop_filter_items ul {
+        grid-template-columns: 1fr
+    }
+}  
+#shopify-section-{{ section.id }} .fabric_filters_sec .fabric_colm .inner_item.active {
+    box-shadow: 0 0 15px #0003;
+    border: 2px solid #6cbe45;
+}  
+</style>
+{% assign sec = section.settings %}
+{% assign info_items = section.blocks %}
+<section class="fabric_filters_sec">
+    <div class="container">
+        <div class="main_row">
+            <div class="main_wrapper">
+                <div class="title_wrap">
+                    <div class="inner_col">
+                        {% if sec.main_title != blank %}
+                            <h2>{{ sec.main_title }}</h2>
+                        {% endif %}
+                        {% if sec.main_subtitle != blank %}
+                            <p>{{ sec.main_subtitle }}</p>
+                        {% endif %}
+                        {% if sec.main_btn_text != blank %}
+                            <div class="btn_wrap">
+                                <a href="{{ sec.main_btn_link }}">{{ sec.main_btn_text }}</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="filter_colm">
+
+                    <div class="dop_top_filter_wrap">
+                        <ul>
+                            <li><a href="javascript:;" data_type="outdoor" class="active">Outdoor</a></li>
+                            <li><a href="javascript:;" data_type="indoor">Indoor</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dop_filter_wrap">
+                        {% assign filter_types = '' %}
+                        {% for item_a in info_items %}
+                            {% if item_a.type == "fabric_info" %}
+                                {% assign itm = item_a.settings %}
+                                {% assign item_type = itm.fabric_type |  split: ',' %}
+                                {% assign out_or_in = itm.out_or_in %}
+
+                                {% for sub_item_a in item_type %}
+                                    {% assign sub_item_text = sub_item_a | strip %}
+                                    {% assign sub_item_text = sub_item_text | append: '|' |  append: out_or_in %}
+                                    {% assign filter_types = filter_types | append: sub_item_text | append: ',' %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                        {% assign filter_types = filter_types |  split: ',' | uniq %}
+                        <ul>
+                            <li data_main_type="all" class="active"><a href="javascript:;" data_type="all" data_main_type="all">View All</a></li>
+                            {% for itm_y in filter_types  %}
+                                {% assign filter_title_val = itm_y |  split: '|' %}
+                                {% assign is_acitve_sub = '' %}
+                                {% if filter_title_val[1] != "outdoor" %}
+                                    {% assign is_acitve_sub = 'style="display:none;"' %}
+                                {% endif %}
+                                <li data_main_type="{{ filter_title_val[1] | handle }}" {{ is_acitve_sub }}><a href="javascript:;" data_type="{{ filter_title_val[0] | handle }}">{{ filter_title_val[0] }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="dop_filter_items">
+                        <ul>
+                            {% for item_a in info_items %}
+                                {% assign itm = item_a.settings %}
+                                {% assign type_str_tmp = '' %}
+                                {% assign type_arr_tmp = itm.fabric_type | split: ',' %}
+                                {% assign main_type_val = itm.out_or_in %}
+
+                                {% assign is_acitve_sub_sub = '' %}
+                                {% if main_type_val != "outdoor" %}
+                                    {% assign is_acitve_sub_sub = 'style="display:none;"' %}
+                                {% endif %}
+
+                                {% for typ_str in type_arr_tmp %}
+                                    {% assign fab_type_val = typ_str |  replace: " ","-"  %}
+                                    {% assign type_str_tmp = type_str_tmp | append: fab_type_val | strip | append: ' ' %}
+                                {% endfor %}
+                                {% if item_a.type == "fabric_info" %}
+                                    <li data_type="{{ type_str_tmp | handle | downcase | strip }}" data_main_type="{{ main_type_val }}" {{ is_acitve_sub_sub }}><a href="javascript:;" data_type="{{ itm.fabric_info_title | handle }}">{{ itm.fabric_info_title }}</a></li>        
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fabric_colm">
+
+            {% for block in info_items %}
+                {% assign blk = block.settings %}
+                {% assign indx = forloop.index %}
+                {% assign out_or_in = blk.out_or_in %}
+
+                {% if block.type == "featured_info" %}
+                    <div class="other_fabric_sample">
+                        <div class="inner_wrapper">
+                            {% if blk.feat_desc != blank %}
+                                <h2>{{ blk.feat_desc }}</h2>
+                            {% endif %}
+                            {% if blk.feat_btn_text != blank %}
+                                <div class="btn_wrap">
+                                    <a href="{{ blk.feat_btn_link }}">{{ blk.feat_btn_text }}</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {%  endif %}
+                {% if block.type == "fabric_info" %}
+                    <div class="inner_item" data_type_content="{{ blk.fabric_info_title | handle }}" data_main_type_content="{{ out_or_in | handle }}">
+                        {% if blk.fabric_info_title != blank %}
+                            <h3>{{ blk.fabric_info_title }}</h3>
+                        {% endif %}
+                        <div class="subtitle">
+                            {% if blk.fabric_info_subtitle != blank %}
+                                <p>{{ blk.fabric_info_subtitle }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="fabric_tb_wrap">
+                            <div class="tabs">
+                                <ul class="list_ul">
+                                    <li class="active"><a href="#tabs-{{ indx }}-1">About</a></li>
+                                    <li><a href="#tabs-{{ indx }}-2">Details</a></li>
+                                    <li><a href="#tabs-{{ indx }}-3">care</a></li>
+                                </ul>
+                                <div id="tabs-{{ indx }}-1" class="tab_content">
+                                    {% if blk.fabric_info_about_head != blank %}
+                                        <h5>{{ blk.fabric_info_about_head }}</h5>
+                                    {% endif %}
+                                    <div class="fabricSectionShow" data_gallery_id="{{ blk.fabric_gallery_id }}">
+                                        <div class="options-list"></div>
+                    
+                                        <div class="dop_filter_pagination" data_page="1" style="display: none;">
+                                            <span class="prev_page disabled">Prev</span>
+                                            <span class="pagination_info">1 of 1</span>
+                                            <span class="next_page disabled">Next</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tabs-{{ indx }}-2" class="tab_content">
+                                    {{ blk.fabric_info_about }}
+                                    {{ blk.fabric_info_details }}
+                                </div>
+                                <div id="tabs-{{ indx }}-3" class="tab_content">
+                                    {{ blk.fabric_info_care }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {%  endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+jQuery(document).on('click', '.fabric_filters_sec .fabric_colm .inner_item .list_ul li a', function(e){
+    e.preventDefault();
+    let this_btn = jQuery(this);
+    let this_li =this_btn.parent();
+    let this_hash = this_btn.get(0).hash;
+    let this_parent = this_btn.parents('.tabs');
+    this_parent.find('.list_ul li').removeClass('active');
+    this_parent.find('.tab_content').hide();
+    jQuery(this_hash).show();
+    this_li.addClass('active');
+});  
+jQuery(document).on('click', '.fabric_filters_sec .dop_filter_wrap ul li a', function(e){
+    e.preventDefault();
+    jQuery('.fabric_filters_sec .dop_filter_wrap ul li').removeClass('active');
+    let this_btn = jQuery(this);
+    let this_li = this_btn.parent();
+    let this_type = this_btn.attr('data_type');
+    this_li.addClass('active');
+
+    if(this_type == "all"){
+        const crnt_main_type = jQuery('.fabric_filters_sec .dop_top_filter_wrap ul li a.active').attr('data_type');
+        if(crnt_main_type != undefined){
+                jQuery('.fabric_filters_sec .dop_filter_items ul li[data_main_type='+crnt_main_type+']').show();
+        }else{
+            jQuery('.fabric_filters_sec .dop_filter_items ul li').show();
+        }
+    }else{
+        jQuery('.fabric_filters_sec .dop_filter_items ul li').hide();
+        // jQuery('.fabric_filters_sec .dop_filter_items ul li[data_type="'+this_type+'"]').show();
+        jQuery('.fabric_filters_sec .dop_filter_items ul li[data_type]').each(function(indx, elm){
+            let this_elm = jQuery(elm);
+            let thiss_type = this_elm.attr('data_type');
+            let thiss_main_type = this_elm.attr('data_main_type');
+            const active_main_type = jQuery('.fabric_filters_sec .dop_top_filter_wrap ul li a.active').attr('data_type');
+            if(thiss_type.includes((this_type).trim()) && thiss_main_type.includes(active_main_type)){
+                this_elm.show();
+            }
+        });
+    }
+});  
+jQuery(document).on('click', '.fabric_filters_sec .dop_filter_items ul li a', function(e){
+    e.preventDefault();
+    jQuery('.fabric_filters_sec .dop_filter_items ul li a.active').removeClass('active');
+    jQuery('.fabric_filters_sec .fabric_colm .inner_item[data_type_content]').removeClass('active')
+    let this_btn = jQuery(this);
+    let this_type = this_btn.attr('data_type');
+    this_btn.addClass('active');
+
+    jQuery('html, body').animate({
+        scrollTop: jQuery('.fabric_filters_sec .fabric_colm .inner_item[data_type_content="'+this_type+'"]').offset().top - 120
+    }, 800, function(){
+        jQuery('.fabric_filters_sec .fabric_colm .inner_item[data_type_content="'+this_type+'"]').addClass('active');
+    });
+});
+
+jQuery(document).on('click', '.fabric_filters_sec .dop_top_filter_wrap ul li a', function(e){
+    e.preventDefault();
+    jQuery('.fabric_filters_sec .dop_filter_wrap ul li').removeClass('active');
+    jQuery('.fabric_filters_sec .dop_filter_wrap ul li a[data_type=all]').parent().addClass('active');
+    const this_btn = jQuery(this);
+    const this_type = this_btn.attr('data_type');
+    
+    jQuery('.fabric_filters_sec .dop_top_filter_wrap ul li a:not([data_type='+this_type+'])').removeClass('active')
+    this_btn.addClass('active');
+
+    jQuery('.fabric_filters_sec .dop_filter_wrap ul li:not([data_main_type='+this_type+'])').hide();
+    jQuery('.fabric_filters_sec .dop_filter_wrap ul li[data_main_type=all]').show();
+    jQuery('.fabric_filters_sec .dop_filter_wrap ul li[data_main_type='+this_type+']').show();
+
+    jQuery('.fabric_filters_sec .dop_filter_items ul li:not([data_main_type='+this_type+'])').hide();
+    jQuery('.fabric_filters_sec .dop_filter_items ul li[data_main_type=all]').show();
+    jQuery('.fabric_filters_sec .dop_filter_items ul li[data_main_type='+this_type+']').show();
+});
+
+let images_data = [];  
+function render_img_cards(data, per_page = 10){
+    let images_html = '';
+    if(data.length >= 1){
+        (data).forEach(function(image, index){
+            const is_visible = index >= per_page ? `style="display:none;"` : '';
+            images_html += `
+                <div class="field_option" keywords="${image.title.en}" ${is_visible}>
+                    <div class="inner_col">
+                        <img class="thumbnail_img" src="${image.url}">
+                    </div>
+                    <label class="field_label">
+                        <img class="" src="${image.url}">
+                        <span>${image.title.en}</span>
+                    </label>
+                </div>
+            `;
+        });
+    }
+    return images_html;
+}
+function fetch_gallery_data(ids, wrap, gallery) {
+            // console.log(ids);
+            wrap.addClass('loading');
+            ids = ids.split(',');
+            // console.log(ids);
+
+            const baseUrl = "https://cdn.xotiny.com/assets/shop/zipcushions/";
+
+            const fetchData = (id) => {
+                const url = `${baseUrl}${(id).trim()}.json`;
+                return jQuery.getJSON(url).then(data => {
+                    return data; // Return the fetched data
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+                    console.error(`Error fetching JSON for ID ${id}:`, textStatus, errorThrown);
+                    return null; // Handle failed request (optional)
+                });
+            };
+
+            // Fetch all data for the IDs and wait for all requests to complete
+            Promise.all(ids.map(id => fetchData(id))).then(responses => {
+                // Filter out any failed requests if necessary
+                const validResponses = responses.filter(response => response !== null);
+
+                // Combine data if needed
+                let combinedImages = [];
+                validResponses.forEach(data => {
+                    if (data && data.images) {
+                        combinedImages = combinedImages.concat(data.images);
+                    }
+                });
+
+                // Add your HTML rendering logic here
+                if (combinedImages.length) {
+                    wrap.addClass('loaded').removeClass('loading');
+                    const per_page = 30;
+                    const img_html = render_img_cards(combinedImages, per_page);
+                    if (combinedImages.length > per_page) {
+                        const total_imgs = combinedImages.length;
+                        const pages = Math.ceil(total_imgs / per_page);
+                        gallery.find('.dop_filter_pagination .pagination_info').text(1 + ' of ' + pages);
+                        gallery.find('.dop_filter_pagination .next_page').removeClass('disabled');
+                        gallery.find('.dop_filter_pagination').show();
+                    }
+                    gallery.find('.options-list').html(img_html);
+                }
+            }).catch(error => {
+                console.error("Error with one or more requests:", error);
+            });
+        }
+
+        function load_fabrics_cards(){
+            let win_post = jQuery(window).scrollTop();
+            jQuery('.fabric_filters_sec .fabric_colm .inner_item:not(.loaded):not(.loading)').each(function(ind, elm){
+                let this_sec = jQuery(elm);
+                let this_top = this_sec.offset().top - (jQuery(window).height() / 2);
+                if(win_post >= this_top){
+                    const this_gallery_ = this_sec.find('.fabricSectionShow');
+                    const this_gall_ids = this_gallery_.attr('data_gallery_id');
+                    if(this_gall_ids != ("" && undefined)){
+                        fetch_gallery_data(this_gall_ids, this_sec, this_gallery_);
+                    }
+                }
+            });
+        }
+
+        window.onload = function(){
+            load_fabrics_cards();
+          switch_play_video_slider();
+          
+          if(jQuery('.product-info__description .prose').length >= 1){
+                jQuery('.product-info__description .prose h4').each(function() {
+                    // Find all elements after the current h4 until the next h4
+                    let elementsToWrap = jQuery(this).nextUntil('h4');
+
+                    // Wrap the selected elements in a div (or any other wrapper)
+                    elementsToWrap.wrapAll('<div class="cstm-tab-content-wrap" style="display:none;"></div>');
+                });
+                jQuery('.product-info__description .prose').addClass('loaded');
+            }else{
+            }
+        };
+        
+        jQuery(window).on('scroll', function(){
+            load_fabrics_cards();
+        });  
+        jQuery(document).on('click', '.fabric_filters_sec .dop_filter_pagination .prev_page', function(){
+            jQuery('.fabric_filters_sec .dop_filter_pagination .next_page').removeClass('disabled');
+            let this_btn = jQuery(this);
+            let this_parent = this_btn.parent();
+            let this_page = Number(this_parent.attr('data_page'));
+            let this_gallery = this_btn.parent().prev();
+            let this_items = this_gallery.find('.field_option');
+            this_parent.attr('data_page', (this_page - 1));
+            const per_page  = 30;
+            const total_items = this_items.length;
+
+            const pages = Math.ceil(total_items / per_page);
+            this_parent.find('.pagination_info').text((this_page - 1) +' of '+ pages);
+
+            const start = (this_page-2) * per_page;
+            const end = start + per_page;
+
+            this_items.hide().slice(start, end).show();
+
+            // console.log(start, end);
+
+            if(start <= 0){
+                jQuery('.fabric_filters_sec .dop_filter_pagination .prev_page').addClass('disabled');
+            }
+        });
+
+        jQuery(document).on('click', '.fabric_filters_sec .dop_filter_pagination .next_page', function(){
+            jQuery('.fabric_filters_sec .dop_filter_pagination .prev_page').removeClass('disabled');
+            let this_btn = jQuery(this);
+            let this_parent = this_btn.parent();
+            let this_page = Number(this_parent.attr('data_page'));
+            let this_gallery = this_btn.parent().prev();
+            let this_items = this_gallery.find('.field_option');
+            this_parent.attr('data_page', (this_page + 1));
+            const per_page  = 30;
+            const total_items = this_items.length;
+
+            const pages = Math.ceil(total_items / per_page);
+            this_parent.find('.pagination_info').text((this_page + 1) +' of '+ pages);
+
+            const start = this_page * per_page;
+            const end = start + per_page;
+
+            this_items.hide().slice(start, end).show();
+
+            // console.log(start, end);
+            if(end >= total_items){
+                jQuery('.fabric_filters_sec .dop_filter_pagination .next_page').addClass('disabled');
+            }
+        });  
+</script>
+{% schema %}
+    {
+      "name": "All Fabric New Section",
+      "settings": [
+        {
+            "type" : "text",
+            "id": "main_title",
+            "label": "Title"
+        },
+        {
+            "type" : "text",
+            "id": "main_subtitle",
+            "label": "Subtitle"
+        },
+        {
+            "type" : "text",
+            "id": "main_btn_text",
+            "label": "Button Text"
+        },
+        {
+            "type" : "text",
+            "id": "main_btn_link",
+            "label": "Button link"
+        }
+      ],
+      "blocks": [
+        {
+            "type": "fabric_info",
+            "name": "Fabric Info",
+            "settings": [
+                {
+                    "type" : "radio",
+                    "id": "out_or_in",
+                    "label": "Indoor or Outdoor",
+                    "options": [
+                        {
+                            "label": "Outdoor",
+                            "value": "outdoor"
+                        },
+                        {
+                            "label": "Indoor",
+                            "value": "indoor"
+                        }
+                    ],
+                    "default": "outdoor"
+                },
+                {
+                    "type" : "text",
+                    "id": "fabric_type",
+                    "label": "Fabric Type",
+                    "info": "This will be use as filter also"
+                },
+                {
+                    "type": "text",
+                    "id": "fabric_info_title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "fabric_info_subtitle",
+                    "label": "Subtitle"
+                },
+                {
+                    "type": "text",
+                    "id": "fabric_info_about_head",
+                    "label": "About Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "fabric_info_about",
+                    "label": "About"
+                },
+                {
+                    "type": "richtext",
+                    "id": "fabric_info_details",
+                    "label": "Fabric Details"
+                },
+                {
+                    "type": "richtext",
+                    "id": "fabric_info_care",
+                    "label": "Washing Care"
+                },
+                {
+                    "type": "text",
+                    "id": "fabric_gallery_id",
+                    "label": "XO Gallery ID"
+                }
+            ]
+        },
+        {
+            "type": "featured_info",
+            "name": "Featured",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "feat_desc",
+                    "label": "Content"
+                },
+                {
+                    "type": "text",
+                    "id": "feat_btn_text",
+                    "label": "Button Text"
+                },
+                {
+                    "type": "text",
+                    "id": "feat_btn_link",
+                    "label": "Button Link"
+                }
+            ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "All Fabric New Section"
+        }
+      ]
+    }
+{% endschema %}

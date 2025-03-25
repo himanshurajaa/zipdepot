@@ -1,0 +1,234 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "index_image_with_text_overlay_8Wz9U3": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Without_overlay.jpg",
+        "mobile_image": "shopify://shop_images/Premium_Selection_of_Fabrics_-_Choose_from_Sunbrella_Agora_and_Serge_Ferrari_in_the_colors_of_your_choice..png",
+        "link": "",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 11,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_html_bYkJgt": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<div class=\"container is-flex is-justify-center\">\n<div style=\"width: 100%; text-align: center; padding: 10px 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;\">\n            <h2><b>Your Vision, Your Cushions- Inside and Out</b></h2>\n            <p>Explore the portfolio below and witness how ordinary indoor and outdoor spaces are turned into extraordinary havens.</p>\n            <p>Each cushion is —crafted for comfort and tailored for you.</p>\n            </div>\n</div>",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "0a3efbc1-4cb9-4eb3-ba79-74f9fe3f1f47": {
+      "type": "app-rush-container-grid",
+      "settings": {
+        "visibility": "all_the_time",
+        "columns_mobile": 1,
+        "columns_tablet": 1,
+        "columns_desktop": 1,
+        "columns_large": 1,
+        "columns_xlarge": 1,
+        "columns_2xlarge": 1,
+        "cssStyle": ""
+      }
+    },
+    "fd53e63e-079f-433a-8906-30981bd6f285": {
+      "type": "app-rush-container-grid",
+      "settings": {
+        "visibility": "all_the_time",
+        "columns_mobile": 1,
+        "columns_tablet": 2,
+        "columns_desktop": 2,
+        "columns_large": 2,
+        "columns_xlarge": 2,
+        "columns_2xlarge": 2,
+        "cssStyle": ""
+      }
+    },
+    "3d1868ec-f1cb-4b2c-b1d6-843c65c8b638": {
+      "type": "index__divider",
+      "settings": {
+        "divider_style": "short",
+        "divider_width": 5,
+        "divider_color": "rgba(0,0,0,0)",
+        "alignment": "center",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_html_eNYT99": {
+      "type": "index__html",
+      "disabled": true,
+      "settings": {
+        "html_content": "<div class=\"xo-gallery\" data-id=\"4\"></div>",
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_html_NndpF9": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<div class=\"container is-flex is-justify-center\" loading=\"lazy\">\n\n<div id=\"evm-lookbook-13114\"></div>\n<script async=\"true\" src=\"https://apps.expertvillagemedia.com/shopify/evm-lookbook/embed.js\" data-shop-id=\"zipcushions.myshopify.com\" data-gallery-id=\"13114\" type=\"text/javascript\"></script>\n</div>",
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_heading_3kjwdb": {
+      "type": "index__heading",
+      "settings": {
+        "preheading": "",
+        "title": "",
+        "subheading": "<h2><strong>Easily Build Your Next Cushion </strong></h2>",
+        "heading_alignment": "center",
+        "vertical_spacing": "small",
+        "preheading_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "subheading_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_gallery_QiXHPy": {
+      "type": "index__gallery",
+      "blocks": {
+        "image_qe7KB7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/01.png",
+            "link": ""
+          }
+        },
+        "image_Af37qt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/02.png",
+            "link": ""
+          }
+        },
+        "image_HbAepQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/03.png",
+            "link": ""
+          }
+        },
+        "image_4MNeYw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/04.png",
+            "link": ""
+          }
+        },
+        "image_YNrmig": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/05.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_qe7KB7",
+        "image_Af37qt",
+        "image_HbAepQ",
+        "image_4MNeYw",
+        "image_YNrmig"
+      ],
+      "settings": {
+        "gallery_type": "classic",
+        "images_per_row": 5,
+        "crop_images": false,
+        "enable_lightbox": true,
+        "overlay_color": "#000000",
+        "link_color": "#ffffff",
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "animation": "fadeInLeft",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "index_image_with_text_overlay_8Wz9U3",
+    "index_html_bYkJgt",
+    "0a3efbc1-4cb9-4eb3-ba79-74f9fe3f1f47",
+    "fd53e63e-079f-433a-8906-30981bd6f285",
+    "3d1868ec-f1cb-4b2c-b1d6-843c65c8b638",
+    "index_html_eNYT99",
+    "index_html_NndpF9",
+    "index_heading_3kjwdb",
+    "index_gallery_QiXHPy"
+  ]
+}

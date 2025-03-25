@@ -1,0 +1,352 @@
+<style>
+
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box a::after,
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box a:before {
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 52px
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec {
+    padding: 70px 0
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec h2 {
+    color: var(--var-000000);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1.08px;
+    margin-bottom: 25px
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .owl-stage {
+    display: flex
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box {
+    border-radius: 30px;
+    background: var(--var-D5D5D5);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, .25);
+    overflow: hidden;
+    position: relative;
+    height: 100%
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .item {
+    padding: 10px 25px 40px;
+    height: 100%
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box a {
+    display: block;
+    position: relative;
+    height: 100%
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box a:before {
+    position: absolute;
+    background-image: url(https://cdn.shopify.com/s/files/1/0614/7453/7714/files/play-icon.svg?v=1731064206)
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box a::after {
+    position: absolute;
+    background-image: url(https://cdn.shopify.com/s/files/1/0614/7453/7714/files/pause-icon.png?v=1733474450);
+    background-size: contain;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .playing .pro_videos_box a::before {
+    z-index: 1
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box video {
+    height: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    display: block
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box video.preview_video {
+    position: absolute;
+    inset: 0
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .playing .pro_videos_box img {
+    opacity: 0;
+    visibility: hidden
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .owl-carousel {
+    padding: 0 80px;
+    max-width: 1360px;
+    margin: auto
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .owl-nav {
+    position: absolute;
+    top: 47%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .owl-nav button {
+    background-image: url(https://zipcushions.com/cdn/shop/files/prev.svg?v=1731064782) !important;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat !important;
+    font-size: 0 !important
+}
+
+#shopify-section-{{ section.id }} .our_customers_sec .owl-nav button.owl-next {
+    transform: scaleX(-1)
+}
+
+
+@media(max-width:1200px) {
+    #shopify-section-{{ section.id }} .our_customers_sec .item {
+        padding: 10px 15px 30px
+    }
+}
+
+@media(max-width:1024px) {
+
+    #shopify-section-{{ section.id }} .our_customers_sec h2 {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0
+    }
+}
+
+@media(max-width:767px) {
+  #shopify-section-{{ section.id }} .our_customers_sec {
+        padding: 20px 0
+    }
+}
+
+@media(max-width:575px) {
+     #shopify-section-{{ section.id }} .our_customers_sec .owl-carousel {
+        padding: 0 40px
+    }
+
+    #shopify-section-{{ section.id }} .our_customers_sec h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        line-height: 38px
+    }
+}  
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box a.playing_full:before, 
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box a.playing_full img, 
+#shopify-section-{{ section.id }} .our_customers_sec .pro_videos_box a.playing_full .preview_video {
+    opacity: 0;
+    visibility: hidden;
+} 
+#shopify-section-{{ section.id }} .owl-carousel .owl-dots.disabled, 
+#shopify-section-{{ section.id }} .owl-carousel .owl-nav.disabled {
+    display: none;
+} 
+#shopify-section-{{ section.id }} .container {
+      display: block;
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);
+    margin-inline-start: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    margin-inline-end: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+}  
+</style>
+<div class="our_customers_sec">
+    <div class="container">
+        <div class="main_wrapper">
+            {% if section.settings.section_title != blank %}
+                <h2>{{ section.settings.section_title }}</h2>
+            {% endif %}
+            <div class="slider_wrapper">
+                <div class="owl-carousel owl-theme">
+                    {% for block in section.blocks %}
+                        {%  assign prev_video_file = block.settings.prev_video_file %}
+                        {%  assign video_file = block.settings.video_file %}
+                        <div class="item">
+                            <div class="pro_videos_box" data_index="{{ forloop.index }}">
+                                <a href="{% if video_file.sources[1].url != "" %}{{ video_file.sources[1].url }}{% else %}javascript:;{% endif %}" >
+                                    <img src="{{ block.settings.image | img_url: 'master' }}" title="" alt="">
+                                    <video class="preview_video" src="{{ prev_video_file.sources[1].url }}" muted ></video>
+                                    <video class="full_video" src="{{ video_file.sources[1].url }}"></video>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+let switch_play_timer = '';
+        let current_active_playing_index = 1;
+        function switch_play_video_slider(){
+            clearTimeout(switch_play_timer);
+            let total_itesm = jQuery('.our_customers_sec .owl-carousel .owl-stage .owl-item').length - 1;
+            if(total_itesm >= 0){
+              let half_items = Math.round((jQuery('.our_customers_sec .owl-carousel .owl-stage .owl-item:not(.cloned)').length - 1) / 2);
+              jQuery('.our_customers_sec .owl-carousel .owl-stage .owl-item').each(function(index, elm){
+                  let this_item = jQuery(elm);
+                  this_item.find('.pro_videos_box a').removeClass('playing_full');
+                  this_item.removeClass('playing').find('video.preview_video').get(0).pause();
+                  this_item.find('video.full_video').get(0).pause();
+              });
+              switch_play_timer = setTimeout(function(){
+                  clearTimeout(switch_play_timer);
+                  let active_slide_obj = jQuery(jQuery('.our_customers_sec .owl-carousel .owl-stage .owl-item.active').get(current_active_playing_index - 1));
+                  active_slide_obj.addClass('playing').find('video.preview_video').get(0).play();
+                  active_slide_obj.addClass('playing').find('video.preview_video').get(0).addEventListener('ended', function(){
+                      // console.log(current_active_playing_index, half_items);
+                      if(current_active_playing_index >= half_items){
+                          $('.our_customers_sec .slider_wrapper .owl-nav button.owl-next').trigger('click');
+                      }else{
+                          if(current_active_playing_index >= total_itesm){
+                              current_active_playing_index = 0;
+                          }else{
+                              current_active_playing_index++;
+                          }
+                          switch_play_video_slider();
+                      }
+                  });
+              }, 400);
+            }
+        }
+
+        let our_customers_slider = jQuery('.our_customers_sec .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            dots: false,
+
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            },
+            onInitialized: function() {
+                switch_play_video_slider();
+            }
+        });
+
+        jQuery(document).on('click', '.our_customers_sec .pro_videos_box a.playing_full', function(e){
+            e.preventDefault();
+            let this_btn = jQuery(this);
+            this_btn.removeClass('playing_full');
+            this_btn.find('video.full_video').get(0).pause();
+        });
+
+        jQuery(document).on('click', '.our_customers_sec .pro_videos_box a:not(.playing_full)', function(e){
+            e.preventDefault();
+            let this_btn = jQuery(this);
+            jQuery('.our_customers_sec .pro_videos_box a').removeClass('playing_full');
+            jQuery('.our_customers_sec .pro_videos_box a video.preview_video').each(function(inx, prev_v){
+                jQuery(prev_v).get(0).pause();
+                jQuery(jQuery(prev_v).parents('.owl-item').get(0)).removeClass('playing');
+            });
+            // our_customers_slider.trigger('to.owl.carousel', Number(this_btn.parent().attr('data_index')) - 1);
+            // current_active_playing_index = Number(this_btn.parent().attr('data_index')) - 1;
+            jQuery(this_btn.parents('.owl-item').get(0)).addClass('playing');
+            this_btn.addClass('playing_full');
+            this_btn.find('video.full_video').get(0).play();
+            clearTimeout(switch_play_timer);
+        });
+
+        jQuery('video.full_video').each(function(indx, video_full){
+            video_full.addEventListener('ended', function(){
+                let this_video = jQuery(video_full);
+                console.log('video endded');
+                
+            });
+        });
+
+        jQuery(document).on('click', '[data-fancybox-close]', function(){
+            jQuery('.our_customers_sec .owl-carousel').trigger('play.owl.autoplay');
+        });
+        jQuery(document).on('click', '.our_customers_sec .pro_videos_box a', function(){
+            jQuery('.our_customers_sec .owl-carousel').trigger('stop.owl.autoplay');
+        });
+
+        
+        our_customers_slider.on('refreshed.owl.carousel', function(property) {
+            switch_play_video_slider();
+        });
+        our_customers_slider.on('changed.owl.carousel', function(property) {
+            // console.log('Owl changed');
+            // console.log(property.item.index);
+            // current_active_playing_index = property.item.index
+            switch_play_video_slider();
+        });  
+</script>
+{% schema %}
+    {
+      "name": "Customer Slider",
+      "settings": [
+        {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "Our Customers are our Proof"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "image",
+          "name": "Image",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+            },
+            {
+                "type": "video",
+                "id": "prev_video_file",
+                "label": "Preview Video"
+            },
+            {
+                "type": "video",
+                "id": "video_file",
+                "label": "Video"
+            },
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Customer Slider"
+        }
+      ]
+    }
+{% endschema %}

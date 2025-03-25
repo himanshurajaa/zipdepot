@@ -1,0 +1,318 @@
+<style>
+#shopify-section-{{ section.id }} .container {
+    --container-inner-width: min((100vw - var(--scrollbar-width, 0px)) - var(--container-gutter) * 2, var(--container-max-width));
+    --container-outer-width: calc(((100vw - var(--scrollbar-width, 0px)) - var(--container-inner-width)) / 2);
+    margin-inline-start: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+    margin-inline-end: max(var(--container-gutter),50% - var(--container-max-width) / 2);
+}
+:root {
+    --btn-bg-color: #de5956;
+    --var-de5956: #de5956;
+    --var-6CBE45: #6CBE45;
+    --var-55C4C4: #55C4C4;
+    --var-F7F7F7: #F7F7F7;
+    --var-D5D5D5: #D5D5D5;
+    --var-1A191E: #1A191E;
+    --var-000000: #000;
+    --var-ffffff: #fff;
+    --body-font-family: "Host Grotesk", sans-serif
+}
+
+#shopify-section-{{ section.id }} .btn_wrap a,
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .product_tag {
+    font-family: Poppins;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: normal
+}
+
+#shopify-section-{{ section.id }} .btn_wrap a {
+    color: var(--var-ffffff);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: var(--var-de5956);
+    padding: 15px 30px;
+    transition: .3s ease-in-out
+}
+
+#shopify-section-{{ section.id }} .btn_wrap a:hover {
+    background: #b02a26 !important
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 100px 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f2ecdf;
+    min-height: 600px
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .product_tag {
+    color: #2a9191;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    background: var(--var-ffffff);
+    padding: 9px 15px;
+    min-width: 130px;
+    position: absolute;
+    top: 25px;
+    left: 25px
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .content_col {
+    width: 50%;
+    padding-right: 80px
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .img_col {
+    width: 50%
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .img_col img {
+    height: 415px;
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .content_col h2 {
+    color: var(--var-000000);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 15px
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .content_col p {
+    color: #1a191e;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .content_col .btn_wrap {
+    margin-top: 25px
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap.reverse_colm {
+    flex-direction: row-reverse
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap.reverse_colm .content_col {
+    padding-left: 120px;
+    padding-right: 0
+}
+
+#shopify-section-{{ section.id }} .featured_bestselling_sec {
+    padding: 60px 0 20px
+}
+
+@media(max-width:1300px) {
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap {
+        padding: 100px 60px;
+        min-height: 550px
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap.reverse_colm .content_col {
+        padding-left: 60px
+    }
+}
+
+@media(max-width:1200px) {
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .content_col h2 {
+        font-size: 42px;
+        line-height: 50px
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap.reverse_colm .content_col {
+        padding-left: 40px
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .content_col {
+        padding-right: 30px
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap {
+        padding: 90px 25px 70px;
+        min-height: auto
+    }
+}
+
+
+@media(max-width:767px) {
+  
+    #shopify-section-{{ section.id }} .btn_wrap a {
+        font-size: 15px;
+        padding: 11px 20px
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .content_col h2 {
+        font-size: 36px;
+        line-height: 44px
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap {
+        padding: 90px 25px 50px;
+        flex-direction: column-reverse !important;
+        background-position: center left
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .content_col {
+        width: 100%;
+        padding: 0 !important
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .img_col {
+        width: 100%
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .img_col img {
+        height: auto;
+        margin-bottom: 18px
+    }
+}
+
+@media(max-width:575px) {
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .img_col img {
+        border-radius: 10px
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap .product_tag {
+        font-size: 13px;
+        border-radius: 5px;
+        padding: 7px 10px;
+        min-width: 120px;
+        top: 20px;
+        left: 20px
+    }
+
+    #shopify-section-{{ section.id }} .featured_bestselling_sec .main_product_wrap {
+        padding: 75px 20px 40px;
+        border-radius: 10px
+    }
+}  
+</style>
+<div class="featured_bestselling_sec">
+    <div class="container">
+        <div class="main_wrapper">
+            {% for block in section.blocks %}
+            <div class="main_product_wrap {% if block.type == 'right_image' %} has_bg_img {% else if block.type == 'left_image' %}reverse_colm{% endif %}" {% if block.type == 'right_image' %}style="background-image: url({{ block.settings.image | img_url: 'master' }});"{% endif %}>
+                    {% if block.settings.top_tag != "" %}<div class="product_tag">{{ block.settings.top_tag }}</div>{% endif %}
+                    <div class="content_col">
+                        <h2>{{ block.settings.title }}</h2>
+                        <p>{{ block.settings.description }}</p>
+                        <div class="btn_wrap">
+                            <a href="{{ block.settings.url }}">{{ block.settings.button_text }}</a>
+                        </div>
+                    </div>
+                    {% if block.type == 'left_image' %}
+                        <div class="img_col">
+                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+      "name": "Custom Featured",
+      "settings": [],
+      "blocks": [
+        {
+            "type": "right_image",
+            "name": "Right BG Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "top_tag",
+                    "label": "Top Tag"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                },
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text"
+                }
+            ]
+        },
+        {
+            "type": "left_image",
+            "name": "Left Card Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "top_tag",
+                    "label": "Top Tag"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                },
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text"
+                }
+            ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Custom Featured"
+        }
+      ]
+    }
+  {% endschema %}
