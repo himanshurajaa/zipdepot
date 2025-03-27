@@ -1,0 +1,80 @@
+<script>
+    function update_foam_fill_choices(){
+            jQuery('#dynamic_option_id_1012 .dpo_swatch_custom_html.dpo_swatch input[type="radio"]').each(function(indx, elm){
+                let elm_obj = jQuery(elm);
+                let cstm_html_info = jQuery('#dynamic_option_id_1012 .control');
+                if(elm_obj.is(':checked')){
+                    let this_image = elm_obj.parent().find('.custom-swatches-img img').attr('src');
+                    let this_title = elm_obj.parent().find('.custom-swatches-img p').text();
+                    console.log(this_image, this_title);
+                    if(cstm_html_info.find('.fiber_fill_info_wrap').length <= 0){
+                        cstm_html_info.append(`
+                            <div class="fiber_fill_info_wrap">
+                                <img src="${this_image}" />
+                                <p>${this_title}</p>
+                            </div>
+                        `);
+                    }else{
+                        cstm_html_info.find('.fiber_fill_info_wrap').html(`
+                            <img src="${this_image}" />
+                            <p>${this_title}</p>
+                        `);
+                    }
+                }
+            })
+        }
+
+        jQuery(document).ready(function(){
+            setTimeout(function(){
+                update_foam_fill_choices();
+            }, 1000);
+            
+        });
+    jQuery(document).on('change', '#dynamic_option_id_1012 .dpo_swatch_custom_html.dpo_swatch input[type="radio"]', function(){
+        let this_check = jQuery(this);
+        update_foam_fill_choices();
+    });
+    jQuery(document).ready(function(){
+        
+        let find_dop_wraper_intr_2 = setInterval(function(){
+            if(jQuery('.dpo-container #itoris_dynamicproductoptions div.select_fabric_version_2 table tbody > .keyword_search').length >= 1){
+                clearInterval(find_dop_wraper_intr_2);
+            }
+        }, 1000);
+
+        let find_dop_wraper_intr = setInterval(function(){
+            if(jQuery('.dpo-container #itoris_dynamicproductoptions div.fabricSectionShow table tbody > .keyword_search').length >= 1){
+                clearInterval(find_dop_wraper_intr);
+            }
+        }, 1000);
+    });   
+    jQuery(document).on('click', function(e){
+        let this_target = jQuery(e.target);
+        if(this_target.parents('.dop_parent_filter').length <= 0){
+            jQuery('.dop_filter_wrap .dop_sub_filter.active').slideUp(200).removeClass('active');
+        }
+
+    });
+        jQuery(document).on('click', "#itoris_dynamicproductoptions .fieldset .dop_filter_wrap li.dop_parent_filter a", function(e){
+            e.preventDefault();
+            let this_btn = jQuery(this);
+            let this_menu = this_btn.next();
+            if(this_menu.hasClass('active')){
+                this_menu.removeClass('active').slideUp(200);
+            }else{
+                jQuery('.dop_filter_wrap .dop_sub_filter.active').slideUp(200);
+                this_menu.addClass('active').slideDown(200);
+            }
+        });    
+        jQuery(document).on('mouseover', '#itoris_dynamicproductoptions .fieldset .fabricSectionShow.Customize .options-list .field.dpo_swatch', function(){
+            const this_item = jQuery(this);
+            const this_item_h = this_item.height();
+            const this_label_h = this_item.find('label').height();
+            const this_parent = this_item.parent();
+            const prnt_top = this_parent.offset().top;
+            const this_y = this_item.offset().top;
+            this_parent.css({
+                '--pop_top': (this_y-(prnt_top+this_label_h+this_item_h))+'px'
+            });
+        });        
+</script>
